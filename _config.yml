@@ -1,7 +1,7 @@
 title: Štěpán Jiří Karásek
 description: About me, games, videos, Mastodon, and blog
 baseurl: ""
-url: "https://sjk.eu"
+url: "https://stepanjiri.github.io/stepankarasek.github.io/"
 
 markdown: kramdown
 permalink: /blog/:title/
