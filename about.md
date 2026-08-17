@@ -8,4 +8,4 @@ permalink: /about/
 
 Write your bio here.
 
-Find me elsewhere: [Videos](/videos/) · [Mastodon](https://mastodon.social/@yourusername)
+Find me elsewhere: [Videos](https://www.youtube.com/channel/UCNr3EHRzIhJ2l8KLF9SlgFw) · [Mastodon](https://mastodon.social/@yourusername)
