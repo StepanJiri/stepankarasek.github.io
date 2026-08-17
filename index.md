@@ -2,3 +2,16 @@
 layout: default
 title: Home
 ---
+<h1>Blog</h1>
+
+<div class="post-list">
+  {% for post in site.posts %}
+  <a class="post-card" href="{{ post.url | relative_url }}">
+    {% if post.image %}
+    <img class="post-card-image" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+    {% endif %}
+    <h2 class="post-card-title">{{ post.title }}</h2>
+    <p class="post-card-preview">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+  </a>
+  {% endfor %}
+</div>
