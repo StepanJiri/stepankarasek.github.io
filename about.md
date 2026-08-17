@@ -14,5 +14,5 @@ I post on [Mastodon](https://mastodon.social/@yourusername)
 
 I make [games](https://itch.io)
 
-I love to reference lyrics from Bob Dylan, Jesse Wells, Neil Young, Goose, the Beatles.
+I love to reference lyrics from Bob Dylan, Jesse Wells, Neil Young, Goose and the Beatles.
 
