@@ -6,4 +6,4 @@ permalink: /videos/
 
 # Videos
 
-Embed or link your YouTube videos here.
+(https://youtu.be/AeLuq1bgteQ)
