@@ -5,5 +5,4 @@ permalink: /videos/
 ---
 
 # Videos
-
-(https://youtu.be/AeLuq1bgteQ)
+https://youtu.be/AeLuq1bgteQ
