@@ -123,3 +123,22 @@ h2 { font-size: 1.4rem; font-weight: 600; }
   font-size: 0.85rem;
   padding: 2rem;
 }
+
+/* Base navigation link style */
+.nav-link {
+  color: #555555;          /* Default text color */
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.2s ease;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #0066cc;
+}
+
+/* Active page (selected) - Blue color */
+.nav-link.active {
+  color: #0066cc;          /* Blue color when on this page */
+  font-weight: 600;        /* Optional: makes selected link slightly bolder */
+}
