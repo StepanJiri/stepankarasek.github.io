@@ -10,7 +10,8 @@ im Štěpán Jiří Karásek
 
 Write your bio here.
 
+I make [games](https://itch.io)
 
+I make [videos](https://www.youtube.com/channel/UCNr3EHRzIhJ2l8KLF9SlgFw)
 
-
-Find me elsewhere: [Videos](https://www.youtube.com/channel/UCNr3EHRzIhJ2l8KLF9SlgFw) · [Mastodon](https://mastodon.social/@yourusername)
+I post on [Mastodon](https://mastodon.social/@yourusername)
