@@ -1,7 +1,8 @@
 title: Štěpán Jiří Karásek
 description: About me, games, videos, Mastodon, and blog
-baseurl: ""
-url: "https://stepanjiri.github.io/stepankarasek.github.io/"
+
+baseurl: "/stepankarasek.github.io"
+url: "https://stepanjiri.github.io"
 
 markdown: kramdown
 permalink: /blog/:title/
@@ -12,6 +13,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
   - scope:
       path: ""
       type: "pages"
