@@ -13,7 +13,7 @@ permalink: /blog/
     <img class="post-card-image" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
     {% endif %}
     <h2 class="post-card-title">{{ post.title }}</h2>
-    <p class="post-card-preview">{{ post.excerpt | strip_html | truncatewords: 300 }}</p>
+    <p class="post-card-preview">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
   </a>
   {% endfor %}
 </div>
