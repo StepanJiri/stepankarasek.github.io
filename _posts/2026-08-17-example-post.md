@@ -1,10 +1,10 @@
 ---
-title: "Your First Article Title"
-image: /assets/images/example-cover.jpg
+layout: post
+title: "Second"
 ---
 
-Write your article here in plain markdown. This first paragraph becomes
-the preview text shown on the blog listing page, so make it count.
+Your text goes here...
 
-## A subheading
+![Inline Image Description]({{ '/assets/images/airpods-demo.jpg' | relative_url }})
 
+More text here...
