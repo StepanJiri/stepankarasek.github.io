@@ -5,7 +5,18 @@ title: "Progres Bar"
 
 this is my first post...
 
-![Inline Image Description](assets/images/Chain-Yer-Dragon-Hand-Signs.gif)
+![Chain Yer Dragon hand signs]({{ '/assets/images/Chain-Yer-Dragon-Hand-Signs.gif' | relative_url }})
+
+
+
+
+
+
+
+
+
+
+
 
 More text here...
 
