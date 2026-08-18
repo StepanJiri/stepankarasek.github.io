@@ -1,7 +1,4 @@
----
-layout: default
-title: Blog
----
+
 ---
 layout: default
 title: Home
@@ -10,10 +7,17 @@ title: Home
 <section class="featured-posts">
   {% for post in site.posts limit:5 %}
     <article class="full-post">
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></p>
+      <!-- Explicit Post Title -->
+      <h2>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
       
-      <!-- Inline images inside post.content will render here naturally -->
+      <!-- Explicit Post Date -->
+      <p class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      </p>
+
+      <!-- Post Body -->
       <div class="post-content">
         {{ post.content }}
       </div>
