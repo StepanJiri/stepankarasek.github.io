@@ -7,7 +7,7 @@ title: Blog
   {% for post in site.posts limit:5 %}
     <article class="full-post">
       <div class="post-content">
-        <!-- Article Title placed inside post-content container -->
+        <!-- Dynamic Post Title -->
         <h2 class="article-title">
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </h2>
@@ -39,7 +39,6 @@ title: Blog
 </section>
 {% endif %}
 
-<!-- Link to full Blog Page -->
 <div class="blog-archive-link">
   <a href="{{ '/blog/' | relative_url }}">View all posts in Blog &rarr;</a>
 </div>
