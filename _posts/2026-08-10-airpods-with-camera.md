@@ -1,6 +1,5 @@
 ---
 title: "AirPods with camera"
-image: /assets/images/example-cover.jpg
 ---
 Short AirPods with camera my prediction  
   
