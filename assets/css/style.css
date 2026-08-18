@@ -45,6 +45,13 @@ a {
   font-size: 1.1rem;
   text-decoration: none;
   color: var(--fg);
+  transition: color 0.2s ease;
+}
+
+/* Active brand title when on the home page */
+.site-brand.active,
+.site-brand.active:hover {
+  color: var(--accent);
 }
 
 .site-nav a {
@@ -126,7 +133,7 @@ h2 { font-size: 1.4rem; font-weight: 600; }
 
 /* Base navigation link style */
 .nav-link {
-  color: #555555;          /* Default text color */
+  color: var(--fg);         /* Uses main text color for readability in dark mode */
   text-decoration: none;
   padding: 8px 12px;
   transition: color 0.2s ease;
@@ -134,19 +141,19 @@ h2 { font-size: 1.4rem; font-weight: 600; }
 
 /* Hover effect */
 .nav-link:hover {
-  color: #0066cc;
+  color: var(--accent);
 }
 
 /* Active page (selected) - Blue color */
 .nav-link.active {
-  color: #0066cc;          /* Blue color when on this page */
-  font-weight: 600;        /* Optional: makes selected link slightly bolder */
+  color: var(--accent);       /* Blue color from your theme variables */
+  font-weight: 600;
 }
 
 /* Separation between fully loaded posts */
 .post-divider {
   border: none;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--border);
   margin: 3rem 0;
 }
 
@@ -154,7 +161,7 @@ h2 { font-size: 1.4rem; font-weight: 600; }
 .archive-posts {
   margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 2px solid #333;
+  border-top: 2px solid var(--border);
 }
 
 .compact-post-list {
@@ -167,6 +174,6 @@ h2 { font-size: 1.4rem; font-weight: 600; }
 }
 
 .compact-post-list time {
-  color: #666;
+  color: var(--muted);
   font-size: 0.9em;
 }
