@@ -59,6 +59,14 @@ a { color: var(--accent); }
   flex-wrap: wrap;
 }
 
+.nav-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+  display: inline-block;
+  margin: 0 0.25rem;
+}
+
 .nav-link {
   text-decoration: none;
   color: var(--fg);
