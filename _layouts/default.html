@@ -10,27 +10,25 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="site-brand {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <div class="header-left">
+      <a class="site-brand {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
-    <nav class="site-nav">
-      <a href="{{ '/blog/' | relative_url }}"
-         class="nav-link {% if page.url contains '/blog' or page.layout == 'post' %}active{% endif %}">Blog</a>
+      <nav class="site-nav">
+        <a href="{{ '/blog/' | relative_url }}"
+           class="nav-link {% if page.url contains '/blog' or page.layout == 'post' %}active{% endif %}">Blog</a>
 
-      <a href="{{ '/about/' | relative_url }}"
-         class="nav-link {% if page.url contains '/about' %}active{% endif %}">About</a>
-    </nav>
-  </header>
+        <a href="{{ '/about/' | relative_url }}"
+           class="nav-link {% if page.url contains '/about' %}active{% endif %}">About Me</a>
+      </nav>
+    </div>
 
-  <div class="profile-row">
-    <p class="profile-bio">Design critic, indie game developer, and student.</p>
-
-    <div class="profile-links">
+    <div class="header-right">
       <a href="https://mastodon.social/@StepanJiriKarasek" class="nav-link nav-link-external" target="_blank" rel="noopener">Mastodon</a>
       <a href="https://www.youtube.com/@RubiconRevisited" class="nav-link nav-link-external" target="_blank" rel="noopener">Videos</a>
       <a href="https://rss.com/podcasts/test-pod734/" class="nav-link nav-link-external" target="_blank" rel="noopener">Podcast</a>
       <a href="https://jirka-karasek.itch.io" class="nav-link nav-link-external" target="_blank" rel="noopener">Games</a>
     </div>
-  </div>
+  </header>
 
   <main>
     {{ content }}
