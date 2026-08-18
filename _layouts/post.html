@@ -7,10 +7,6 @@ layout: default
     <p class="post-meta">{{ page.date | date: '%B %-d, %Y' }}</p>
   </header>
 
-  {% if page.image %}
-  <img class="post-image" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-  {% endif %}
-
   <div class="post-content">
     {{ content }}
   </div>
