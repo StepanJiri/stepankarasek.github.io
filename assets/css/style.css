@@ -41,23 +41,14 @@ a { color: var(--accent); }
   gap: 1rem;
 }
 
-.profile-row {
+.header-left {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 1.25rem;
   flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0.6rem 2rem;
-  border-bottom: 1px solid var(--border);
 }
 
-.profile-bio {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.profile-links {
+.header-right {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -80,14 +71,6 @@ a { color: var(--accent); }
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
-}
-
-.nav-divider {
-  width: 1px;
-  height: 20px;
-  background: var(--border);
-  display: inline-block;
-  margin: 0 0.25rem;
 }
 
 .nav-link {
@@ -124,11 +107,6 @@ a { color: var(--accent); }
   background: #cccccc;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-1px);
-}
-
-.external-icon {
-  font-size: 0.8em;
-  opacity: 0.6;
 }
 
 /* ---------- Main / typography ---------- */
