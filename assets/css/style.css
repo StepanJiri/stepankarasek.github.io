@@ -30,11 +30,12 @@ a {
   color: var(--accent);
 }
 
+/* Reduced vertical padding (y-padding: 0.6rem) */
 .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 2rem;
+  padding: 0.6rem 2rem;
   border-bottom: 1px solid var(--border);
   flex-wrap: wrap;
   gap: 1rem;
@@ -42,20 +43,19 @@ a {
 
 .site-brand {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   text-decoration: none;
   color: var(--fg);
   transition: color 0.2s ease;
 }
 
-/* Active brand title when on the home page */
 .site-brand.active,
 .site-brand.active:hover {
   color: var(--accent);
 }
 
 .site-nav a {
-  margin-left: 1.25rem;
+  margin-left: 1rem;
   text-decoration: none;
   color: var(--fg);
   font-size: 0.95rem;
@@ -65,102 +65,63 @@ a {
   color: var(--accent);
 }
 
+/* Reduced top/bottom padding (1rem instead of 2rem) */
 main {
   max-width: 720px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
-h1 { font-size: 2rem; font-weight: 700; }
-h2 { font-size: 1.4rem; font-weight: 600; }
+/* Larger title sizes */
+h1 { font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-top: 0.5rem; }
+h2 { font-size: 1.8rem; font-weight: 700; line-height: 1.3; }
 
-.post-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
-  max-width: 900px;
+.full-post h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
 }
 
-.post-card {
-  display: block;
-  text-decoration: none;
+.full-post h2 a {
   color: var(--fg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.15s ease;
+  text-decoration: none;
 }
 
-.post-card:hover {
-  transform: translateY(-2px);
-}
-
-.post-card-image {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  display: block;
-}
-
-.post-card-title {
-  margin: 0.75rem 1rem 0.25rem;
-  font-size: 1.1rem;
-}
-
-.post-card-preview {
-  margin: 0 1rem 1rem;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.post-image {
-  width: 100%;
-  border-radius: 10px;
-  margin: 1rem 0;
+.full-post h2 a:hover {
+  color: var(--accent);
 }
 
 .post-meta {
   color: var(--muted);
   font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 
-.site-footer {
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.85rem;
-  padding: 2rem;
-}
-
-/* Base navigation link style */
-.nav-link {
-  color: var(--fg);         /* Uses main text color for readability in dark mode */
-  text-decoration: none;
-  padding: 8px 12px;
-  transition: color 0.2s ease;
-}
-
-/* Hover effect */
-.nav-link:hover {
-  color: var(--accent);
-}
-
-/* Active page (selected) - Blue color */
-.nav-link.active {
-  color: var(--accent);       /* Blue color from your theme variables */
-  font-weight: 600;
-}
-
-/* Separation between fully loaded posts */
+/* Reduced vertical margins on post dividers */
 .post-divider {
   border: none;
   border-top: 1px solid var(--border);
-  margin: 3rem 0;
+  margin: 1.75rem 0;
 }
 
-/* Compact list styling for older posts */
+/* Image containment fix */
+main img,
+.post-content img,
+.full-post img,
+article img {
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
+/* Compact archive section */
 .archive-posts {
-  margin-top: 4rem;
-  padding-top: 2rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
   border-top: 2px solid var(--border);
 }
 
@@ -178,35 +139,27 @@ h2 { font-size: 1.4rem; font-weight: 600; }
   font-size: 0.9em;
 }
 
-/* Prevent inline Markdown images from breaking out of containers */
-.post-content img,
-.full-post img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1.5rem 0;
-  border-radius: 8px;
+/* Bottom blog page link */
+.blog-archive-link {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
 }
 
-/* Ensure post titles are styled cleanly on homepage */
-.full-post h2 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-.full-post h2 a {
-  color: var(--fg);
+.blog-archive-link a {
+  font-weight: 600;
+  font-size: 1.1rem;
   text-decoration: none;
 }
 
-.full-post h2 a:hover {
-  color: var(--accent);
+.blog-archive-link a:hover {
+  text-decoration: underline;
 }
 
-
-
-
-
-
-
-
+/* Reduced footer padding */
+.site-footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 1rem 2rem;
+}
