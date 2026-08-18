@@ -3,16 +3,31 @@ layout: default
 title: Blog
 ---
 
-<h1>Blog</h1>
-
-<div class="post-list">
-  {% for post in site.posts %}
-  <a class="post-card" href="{{ post.url | relative_url }}">
-    {% if post.image %}
-    <img class="post-card-image" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
-    {% endif %}
-    <h2 class="post-card-title">{{ post.title }}</h2>
-    <p class="post-card-preview">{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
-  </a>
+<section class="featured-posts">
+  {% for post in site.posts limit:5 %}
+    <article class="full-post">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></p>
+      
+      <div class="post-content">
+        {{ post.content }}
+      </div>
+    </article>
+    <hr class="post-divider" />
   {% endfor %}
-</div>
+</section>
+
+{% if site.posts.size > 5 %}
+<section class="archive-posts">
+  <h3>Older Posts</h3>
+  <ul class="compact-post-list">
+    {% for post in site.posts offset:5 %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        — 
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
