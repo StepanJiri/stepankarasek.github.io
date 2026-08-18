@@ -142,3 +142,31 @@ h2 { font-size: 1.4rem; font-weight: 600; }
   color: #0066cc;          /* Blue color when on this page */
   font-weight: 600;        /* Optional: makes selected link slightly bolder */
 }
+
+/* Separation between fully loaded posts */
+.post-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 3rem 0;
+}
+
+/* Compact list styling for older posts */
+.archive-posts {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 2px solid #333;
+}
+
+.compact-post-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.compact-post-list li {
+  margin-bottom: 0.5rem;
+}
+
+.compact-post-list time {
+  color: #666;
+  font-size: 0.9em;
+}
