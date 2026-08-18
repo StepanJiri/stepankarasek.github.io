@@ -10,11 +10,12 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="site-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <!-- Active check added for site title on root homepage -->
+    <a class="site-brand {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <nav class="site-nav">
       <!-- Blog Link (Active on root /, /blog/, or post layout) -->
       <a href="{{ '/blog/' | relative_url }}" 
-         class="nav-link {% if page.url == '/' or page.url contains '/blog' or page.layout == 'post' %}active{% endif %}">Blog</a>
+         class="nav-link {% if page.url contains '/blog' or page.layout == 'post' %}active{% endif %}">Blog</a>
 
       <!-- About Link (Active on /about/) -->
       <a href="{{ '/about/' | relative_url }}" 
