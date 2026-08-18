@@ -30,7 +30,7 @@ a {
   color: var(--accent);
 }
 
-/* Reduced vertical padding (y-padding: 0.6rem) */
+/* Reduced vertical header padding */
 .site-header {
   display: flex;
   align-items: center;
@@ -65,7 +65,7 @@ a {
   color: var(--accent);
 }
 
-/* Reduced top/bottom padding (1rem instead of 2rem) */
+/* Container */
 main {
   max-width: 720px;
   margin: 0 auto;
@@ -136,132 +136,77 @@ article img {
   border-radius: 8px;
 }
 
-/* Compact archive section */
-.archive-posts {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 2px solid var(--border);
+/* Blog Page Grid Layout */
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-.compact-post-list {
-  list-style: none;
-  padding-left: 0;
+/* Card Container */
+.post-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  background: var(--bg);
+  transition: transform 0.15s ease;
 }
 
-.compact-post-list li {
-  margin-bottom: 0.5rem;
+.post-card:hover {
+  transform: translateY(-2px);
 }
 
-.compact-post-list time {
-  color: var(--muted);
-  font-size: 0.9em;
+.post-card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
 }
 
-/* Bottom blog page link */
-.blog-archive-link {
-  margin-top: 2rem;
-  padding: 1rem 0;
-  text-align: center;
-}
-
-.blog-archive-link a {
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-decoration: none;
-}
-
-.blog-archive-link a:hover {
-  text-decoration: underline;
-}
-
-/* Reduced footer padding */
-.site-footer {
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.85rem;
-  padding: 1rem 2rem;
-}  justify-content: space-between;
-  padding: 0.6rem 2rem;
-  border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.site-brand {
+/* Title link inside card */
+.post-card-title {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  font-size: 1.25rem;
+}
+
+.post-card-link {
   text-decoration: none;
   color: var(--fg);
-  transition: color 0.2s ease;
 }
 
-.site-brand.active,
-.site-brand.active:hover {
+.post-card-link:hover .post-card-title {
   color: var(--accent);
 }
 
-.site-nav a {
-  margin-left: 1rem;
-  text-decoration: none;
+/* Preview text styling inside card */
+.post-card-preview {
   color: var(--fg);
   font-size: 0.95rem;
-}
-
-.site-nav a:hover {
-  color: var(--accent);
-}
-
-/* Reduced top/bottom padding (1rem instead of 2rem) */
-main {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-}
-
-/* Larger title sizes */
-h1 { font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-top: 0.5rem; }
-h2 { font-size: 1.8rem; font-weight: 700; line-height: 1.3; }
-
-.full-post h2 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-top: 0;
-  margin-bottom: 0.25rem;
-}
-
-.full-post h2 a {
-  color: var(--fg);
-  text-decoration: none;
-}
-
-.full-post h2 a:hover {
-  color: var(--accent);
-}
-
-.post-meta {
-  color: var(--muted);
-  font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
-/* Reduced vertical margins on post dividers */
-.post-divider {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 1.75rem 0;
+.post-card-preview p {
+  margin: 0.5rem 0;
 }
 
-/* Image containment fix */
-main img,
-.post-content img,
-.full-post img,
-article img {
-  max-width: 100% !important;
-  width: auto !important;
-  height: auto !important;
-  display: block;
-  margin: 1rem auto;
-  border-radius: 8px;
+.post-card-preview h1,
+.post-card-preview h2,
+.post-card-preview h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+/* Read more link at bottom of card */
+.read-more {
+  margin-top: auto;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
 }
 
 /* Compact archive section */
