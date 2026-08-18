@@ -1,8 +1,8 @@
 ---
-title: "Second"
+title: "AirPods with camera"
 image: /assets/images/example-cover.jpg
 ---
-# Short AirPods with camera my prediction  
+Short AirPods with camera my prediction  
   
   
 **Get to my predictions in first 3 second**   
