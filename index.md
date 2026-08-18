@@ -36,3 +36,8 @@ title: Blog
   </ul>
 </section>
 {% endif %}
+
+<!-- Link to full Blog Page -->
+<div class="blog-archive-link">
+  <a href="{{ '/blog/' | relative_url }}">View all posts in Blog &rarr;</a>
+</div>
