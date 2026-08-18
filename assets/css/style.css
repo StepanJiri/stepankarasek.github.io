@@ -48,6 +48,10 @@ a { color: var(--accent); }
   color: var(--fg);
 }
 
+.site-brand.active {
+  color: var(--accent);
+}
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -55,7 +59,6 @@ a { color: var(--accent); }
   flex-wrap: wrap;
 }
 
-/* Internal page links (Blog / About) */
 .nav-link {
   text-decoration: none;
   color: var(--fg);
@@ -69,14 +72,11 @@ a { color: var(--accent); }
   color: var(--accent);
 }
 
-/* Active internal page = blue text */
 .nav-link.active {
   color: var(--accent);
   font-weight: 600;
 }
 
-/* External links (Games / Videos / Mastodon) = pill + drop shadow,
-   so they visually read as "leaving the site" rather than a tab */
 .nav-link-external {
   background: var(--card-bg);
   border: 1px solid var(--border);
