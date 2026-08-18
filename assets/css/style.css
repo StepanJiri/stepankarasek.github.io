@@ -65,14 +65,14 @@ a {
   color: var(--accent);
 }
 
-/* Container */
+/* Main Container */
 main {
   max-width: 720px;
   margin: 0 auto;
   padding: 1rem 2rem;
 }
 
-/* Typography & Title sizes */
+/* Typography & Titles */
 h1 { font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-top: 0.5rem; }
 h2 { font-size: 1.8rem; font-weight: 700; line-height: 1.3; }
 
@@ -92,7 +92,6 @@ h2 { font-size: 1.8rem; font-weight: 700; line-height: 1.3; }
   color: var(--accent);
 }
 
-/* Styling for article titles placed directly inside .post-content */
 .post-content .article-title {
   font-size: 2.2rem;
   font-weight: 800;
@@ -116,14 +115,14 @@ h2 { font-size: 1.8rem; font-weight: 700; line-height: 1.3; }
   margin-bottom: 1rem;
 }
 
-/* Reduced vertical margins on post dividers */
+/* Dividers */
 .post-divider {
   border: none;
   border-top: 1px solid var(--border);
   margin: 1.75rem 0;
 }
 
-/* Image containment fix */
+/* Image containment */
 main img,
 .post-content img,
 .full-post img,
@@ -136,7 +135,7 @@ article img {
   border-radius: 8px;
 }
 
-/* Blog Page Grid Layout */
+/* Blog Page Card Grid */
 .post-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -144,7 +143,6 @@ article img {
   margin-top: 1.5rem;
 }
 
-/* Card Container */
 .post-card {
   display: flex;
   flex-direction: column;
@@ -167,7 +165,6 @@ article img {
   margin-bottom: 0.75rem;
 }
 
-/* Title link inside card */
 .post-card-title {
   margin: 0.25rem 0 0.5rem;
   font-size: 1.3rem;
@@ -183,25 +180,13 @@ article img {
   color: var(--accent);
 }
 
-/* Preview text styling inside card */
 .post-card-preview {
-  color: var(--fg);
+  color: var(--muted);
   font-size: 0.95rem;
   margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
-.post-card-preview p {
-  margin: 0.5rem 0;
-}
-
-.post-card-preview h1,
-.post-card-preview h2,
-.post-card-preview h3 {
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
-}
-
-/* Read more link at bottom of card */
 .read-more {
   margin-top: auto;
   font-weight: 600;
@@ -209,7 +194,7 @@ article img {
   text-decoration: none;
 }
 
-/* Compact archive section */
+/* Archive list */
 .archive-posts {
   margin-top: 2rem;
   padding-top: 1rem;
@@ -230,7 +215,6 @@ article img {
   font-size: 0.9em;
 }
 
-/* Bottom blog page link */
 .blog-archive-link {
   margin-top: 2rem;
   padding: 1rem 0;
@@ -247,7 +231,6 @@ article img {
   text-decoration: underline;
 }
 
-/* Reduced footer padding */
 .site-footer {
   text-align: center;
   color: var(--muted);
