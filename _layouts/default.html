@@ -11,17 +11,24 @@
 <body>
   <header class="site-header">
     <a class="site-brand {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav class="site-nav">
-      <!-- Active on homepage, /blog/, or inside individual post pages -->
-      <a href="{{ '/blog/' | relative_url }}" 
-         class="nav-link {% if page.url == '/' or page.url contains '/blog' or page.layout == 'post' %}active{% endif %}">Blog</a>
 
-      <a href="{{ '/about/' | relative_url }}" 
+    <nav class="site-nav">
+      <!-- Blog is only active when you're actually on /blog/ or reading a post, NOT on the homepage -->
+      <a href="{{ '/blog/' | relative_url }}"
+         class="nav-link {% if page.url contains '/blog' or page.layout == 'post' %}active{% endif %}">Blog</a>
+
+      <a href="{{ '/about/' | relative_url }}"
          class="nav-link {% if page.url contains '/about' %}active{% endif %}">About</a>
 
-      <a href="https://jirka-karasek.itch.io" class="nav-link">Games</a>
-      <a href="https://www.youtube.com/@RubiconRevisited" class="nav-link">Videos</a>
-      <a href="https://mastodon.social/@yourusername" class="nav-link">Mastodon</a>
+      <a href="https://jirka-karasek.itch.io" class="nav-link nav-link-external" target="_blank" rel="noopener">
+        Games <span class="external-icon" aria-hidden="true">&#8599;</span>
+      </a>
+      <a href="https://www.youtube.com/@RubiconRevisited" class="nav-link nav-link-external" target="_blank" rel="noopener">
+        Videos <span class="external-icon" aria-hidden="true">&#8599;</span>
+      </a>
+      <a href="https://mastodon.social/@yourusername" class="nav-link nav-link-external" target="_blank" rel="noopener">
+        Mastodon <span class="external-icon" aria-hidden="true">&#8599;</span>
+      </a>
     </nav>
   </header>
 
