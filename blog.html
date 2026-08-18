@@ -16,9 +16,14 @@ permalink: /blog/
       <h2 class="post-card-title">{{ post.title }}</h2>
     </a>
     
-    <div class="post-card-preview">
-      {{ post.excerpt }}
-    </div>
+    <p class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+    </p>
+
+    <!-- Truncated preview text only -->
+    <p class="post-card-preview">
+      {{ post.excerpt | strip_html | truncatewords: 30 }}
+    </p>
 
     <a href="{{ post.url | relative_url }}" class="read-more">Read post &rarr;</a>
   </article>
