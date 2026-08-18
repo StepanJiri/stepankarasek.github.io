@@ -7,7 +7,6 @@ title: Blog
   {% for post in site.posts limit:5 %}
     <article class="full-post">
       <div class="post-content">
-        <!-- Dynamic Post Title -->
         <h2 class="article-title">
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </h2>
@@ -16,7 +15,6 @@ title: Blog
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
         </p>
 
-        <!-- Post Body -->
         {{ post.content }}
       </div>
     </article>
