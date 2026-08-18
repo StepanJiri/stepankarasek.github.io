@@ -18,15 +18,19 @@
 
       <a href="{{ '/about/' | relative_url }}"
          class="nav-link {% if page.url contains '/about' %}active{% endif %}">About</a>
+    </nav>
+  </header>
 
-      <span class="nav-divider" aria-hidden="true"></span>
+  <div class="profile-row">
+    <p class="profile-bio">Design critic, indie game developer, and student.</p>
 
-      <a href="https://mastodon.social/@StepanJiriKarasek" class="nav-link nav-link-external" target="_blank" rel="noopener">Mastodon</a>      
+    <div class="profile-links">
+      <a href="https://mastodon.social/@StepanJiriKarasek" class="nav-link nav-link-external" target="_blank" rel="noopener">Mastodon</a>
       <a href="https://www.youtube.com/@RubiconRevisited" class="nav-link nav-link-external" target="_blank" rel="noopener">Videos</a>
       <a href="https://rss.com/podcasts/test-pod734/" class="nav-link nav-link-external" target="_blank" rel="noopener">Podcast</a>
       <a href="https://jirka-karasek.itch.io" class="nav-link nav-link-external" target="_blank" rel="noopener">Games</a>
-    </nav>
-  </header>
+    </div>
+  </div>
 
   <main>
     {{ content }}
