@@ -19,6 +19,7 @@ Any sidebar can be hidden to resized by hovering over the edge of the sidebar an
 
 <p class="video-caption">Moving the calculator sidebar in and out.</p>
 
+
 But that is still not the end. What happens when I put the calculator window on the edge of left screen and hide the history sidebar. it should move left, in that moment hide from screen.
 
 
