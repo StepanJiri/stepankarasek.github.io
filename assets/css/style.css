@@ -150,11 +150,10 @@ h2 { font-size: 1.6rem; font-weight: 700; line-height: 1.3; }
   border-top: 1px solid var(--border);
   margin: 1.75rem 0;
 }
-
-main img, main video,
-.post-content img, .post-content video,
-.full-post img, .full-post video,
-article img, article video {
+main img,
+.post-content img,
+.full-post img,
+article img {
   max-width: 100%;
   width: auto;
   height: auto;
@@ -163,6 +162,17 @@ article img, article video {
   border-radius: 8px;
 }
 
+main video,
+.post-content video,
+.full-post video,
+article video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
 /* ---------- Blog listing (card grid) ---------- */
 .post-list {
   display: grid;
