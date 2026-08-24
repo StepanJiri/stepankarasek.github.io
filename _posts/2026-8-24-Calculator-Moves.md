@@ -6,20 +6,18 @@ In macOS Golden Gate the default Apple calculator app has sidebar menu that show
 
 Any sidebar can be hidden to resized by hovering over the edge of the sidebar and clicking and grading left to hide the sidebar or left to make the width of the sidebar bigger. While I was playing with the app. I was able to move the window to left by hiding are showing the sidebar by mouse. Now I can not replicate it. From what I can see is before the history sidebar did not move the main view it put the history on the right. So when I hide the sidebar the main view moved to the poison of sidebar. That means that the window moved left. As I said now I can not replicate it even on the same version. 
 
-<video id="calcVideo" autoplay muted loop playsinline>
-  <source src="{{ '/assets/images/Calculator-Sidebar/Sidebar-Mouse-Calculator.mp4' | relative_url }}" type="video/mp4">
-</video>
-
-<div class="video-controls">
-  <button class="video-toggle" onclick="
+<div class="video-wrap" id="calcVideoWrap">
+  <video id="calcVideo" autoplay muted loop playsinline>
+    <source src="{{ '/assets/images/Calculator-Sidebar/Sidebar-Mouse-Calculator.mp4' | relative_url }}" type="video/mp4">
+  </video>
+  <button class="video-overlay-btn" onclick="
     const v = document.getElementById('calcVideo');
     if (v.paused) { v.play(); this.textContent = '⏸'; }
     else { v.pause(); this.textContent = '▶'; }
   ">⏸</button>
-  <span class="video-caption">Moving the calculator sidebar in and out.</span>
 </div>
 
-
+<p class="video-caption">Moving the calculator sidebar in and out.</p>
 
 But that is still not the end. What happens when I put the calculator window on the edge of left screen and hide the history sidebar. it should move left, in that moment hide from screen.
 
