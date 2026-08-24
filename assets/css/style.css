@@ -313,3 +313,17 @@ article video {
     grid-template-columns: 1fr;
   }
 }
+
+main video,
+.post-content video,
+.full-post video,
+article video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
