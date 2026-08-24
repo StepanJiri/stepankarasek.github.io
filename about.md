@@ -6,7 +6,9 @@ permalink: /about/
 
 # About Me
 
-im Štěpán Jiří Karásek 
+Hi welcome to my page. Here I write about what I find interesting. Most of the time it is (just read the blog). 
+
+I will try my best writing here. Im not native English speaker. 
 
 I make [videos](https://www.youtube.com/channel/UCNr3EHRzIhJ2l8KLF9SlgFw)
 
