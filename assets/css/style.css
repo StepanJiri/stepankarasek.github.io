@@ -327,3 +327,34 @@ article video {
   margin: 1rem auto;
   border-radius: 8px;
 }
+
+.video-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: -0.5rem 0 1.5rem;
+}
+
+.video-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--fg);
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.video-toggle:hover {
+  background: var(--border);
+}
+
+.video-caption {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
