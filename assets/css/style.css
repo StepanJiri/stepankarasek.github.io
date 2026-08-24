@@ -150,6 +150,7 @@ h2 { font-size: 1.6rem; font-weight: 700; line-height: 1.3; }
   border-top: 1px solid var(--border);
   margin: 1.75rem 0;
 }
+
 main img,
 .post-content img,
 .full-post img,
@@ -169,10 +170,49 @@ article video {
   width: 100%;
   max-width: 100%;
   height: auto;
+  max-height: 70vh;
+  object-fit: contain;
   display: block;
-  margin: 1rem auto;
+  margin: 0;
   border-radius: 8px;
 }
+
+/* ---------- Custom video play/pause overlay ---------- */
+.video-wrap {
+  position: relative;
+  margin: 1rem auto;
+}
+
+.video-overlay-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.video-overlay-btn.visible {
+  opacity: 1;
+}
+
+.video-caption {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0.75rem 0 1.5rem;
+}
+
 /* ---------- Blog listing (card grid) ---------- */
 .post-list {
   display: grid;
@@ -312,99 +352,4 @@ article video {
   .post-list {
     grid-template-columns: 1fr;
   }
-}
-
-main video,
-.post-content video,
-.full-post video,
-article video {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 70vh;
-  object-fit: contain;
-  display: block;
-  margin: 1rem auto;
-  border-radius: 8px;
-}
-
-.video-controls {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin: -0.5rem 0 1.5rem;
-}
-
-.video-toggle {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  background: var(--card-bg);
-  color: var(--fg);
-  font-size: 0.85rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.video-toggle:hover {
-  background: var(--border);
-}
-
-.video-caption {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.video-wrap {
-  position: relative;
-  margin: 1rem auto;
-}
-
-.video-wrap video {
-  margin: 0;
-}
-
-.video-overlay-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(0, 0, 0, 0.55);
-  color: #fff;
-  font-size: 1.1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.15s ease;
-}
-
-/* Desktop: show on hover */
-@media (hover: hover) {
-  .video-wrap:hover .video-overlay-btn {
-    opacity: 1;
-  }
-}
-
-/* Touch devices: always visible so it's tappable without a hover state */
-@media (hover: none) {
-  .video-overlay-btn {
-    opacity: 1;
-  }
-}
-
-.video-caption {
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.9rem;
-  margin: -0.5rem 0 1.5rem;
 }
