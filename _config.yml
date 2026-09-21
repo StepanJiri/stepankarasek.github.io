@@ -1,8 +1,8 @@
 title: Štěpán Jiří Karásek
 description: About me, games, videos, Mastodon, and blog
 
-baseurl: "/stepankarasek.github.io"
-url: "https://stepanjiri.github.io"
+baseurl: ""
+url: "https://rubiconrevisited.com"
 
 markdown: kramdown
 permalink: /blog/:title/
