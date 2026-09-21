@@ -18,8 +18,4 @@ I make [games](https://itch.io)
 
 I love to reference lyrics from Bob Dylan, Jesse Wells, Neil Young, Goose and the Beatles.
 
-
-
-![Inline Image Description]({{ '/assets/images/About_Me/Photo1.jpg' | relative_url }})
-
 ![Inline Image Description]({{ '/assets/images/About_Me/Photo1_2,4.jpg' | relative_url }})
