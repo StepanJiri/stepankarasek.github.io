@@ -353,3 +353,44 @@ article video {
     grid-template-columns: 1fr;
   }
 }
+/* ---------- Blog archive list ---------- */
+.archive-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.archive-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.archive-date {
+  flex: 0 0 110px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.archive-title {
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.archive-title:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 480px) {
+  .archive-item {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .archive-date {
+    flex: none;
+  }
+}
