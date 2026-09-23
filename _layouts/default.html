@@ -35,13 +35,9 @@
   </main>
 
   <footer class="site-footer">
+    {% unless page.hide_rss %}
     <p><a href="{{ '/feed.xml' | relative_url }}" class="footer-rss">RSS</a></p>
+    {% endunless %}
   </footer>
 </body>
 </html>
-
-<footer class="site-footer">
-  {% unless page.hide_rss %}
-  <p><a href="{{ '/feed.xml' | relative_url }}" class="footer-rss">RSS</a></p>
-  {% endunless %}
-</footer>
