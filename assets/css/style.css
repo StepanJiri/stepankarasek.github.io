@@ -16,6 +16,9 @@
     --border: #222222;
     --card-bg: #151515;
   }
+  .archive-date {
+    color: #555555;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -212,7 +215,7 @@ article video {
   margin: 0.75rem 0 1.5rem;
 }
 
-/* ---------- Blog listing (card grid) ---------- */
+/* ---------- Blog listing (card grid, if still used anywhere) ---------- */
 .post-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -275,6 +278,38 @@ article video {
   font-weight: 600;
   font-size: 0.88rem;
   text-decoration: none;
+}
+
+/* ---------- Blog archive list ---------- */
+.archive-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.archive-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.archive-date {
+  flex: 0 0 110px;
+  color: #b3b3b3;
+  font-size: 0.85rem;
+}
+
+.archive-title {
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.archive-title:hover {
+  color: var(--accent);
 }
 
 /* ---------- Archive list on homepage ---------- */
@@ -362,47 +397,7 @@ article video {
 
   main {
     padding: 1.25rem;
-
-    .nav-icon {
-    display: inline-block;
   }
-
-  .nav-text {
-    display: none;
-  }
-
-  .nav-link-external {
-    padding: 0.4rem 0.55rem;
-  }
-/* ---------- Blog archive list ---------- */
-.archive-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 1.5rem;
-}
-
-.archive-item {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  padding: 0.6rem 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.archive-date {
-  flex: 0 0 110px;
-  color: #b3b3b3;
-  font-size: 0.85rem;
-}
-.archive-title {
-  color: var(--fg);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.05rem;
-}
-
-.archive-title:hover {
-  color: var(--accent);
 }
 
 @media (max-width: 480px) {
@@ -413,11 +408,4 @@ article video {
   .archive-date {
     flex: none;
   }
-}
-
-.nav-icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  display: none;
 }
