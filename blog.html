@@ -6,26 +6,11 @@ permalink: /blog/
 
 <h1>Blog</h1>
 
-<div class="post-list">
+<ul class="archive-list">
   {% for post in site.posts %}
-  <article class="post-card">
-    <a href="{{ post.url | relative_url }}" class="post-card-link">
-      {% if post.image %}
-      <img class="post-card-image" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
-      {% endif %}
-      <h2 class="post-card-title">{{ post.title }}</h2>
-    </a>
-    
-    <p class="post-meta">
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-    </p>
-
-    <!-- Truncated preview text only -->
-    <p class="post-card-preview">
-      {{ post.excerpt | strip_html | truncatewords: 30 }}
-    </p>
-
-    <a href="{{ post.url | relative_url }}" class="read-more">Read post &rarr;</a>
-  </article>
+  <li class="archive-item">
+    <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+    <a href="{{ post.url | relative_url }}" class="archive-title">{{ post.title }}</a>
+  </li>
   {% endfor %}
-</div>
+</ul>
