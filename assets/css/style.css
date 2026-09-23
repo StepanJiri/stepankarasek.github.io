@@ -370,10 +370,9 @@ article video {
 
 .archive-date {
   flex: 0 0 110px;
-  color: var(--muted);
-  font-size: 0.9rem;
+  color: #b3b3b3;
+  font-size: 0.85rem;
 }
-
 .archive-title {
   color: var(--fg);
   text-decoration: none;
