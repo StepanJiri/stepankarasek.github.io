@@ -2,8 +2,9 @@
 layout: default
 title: About
 permalink: /about/
----
 hide_rss: true
+---
+
 
 
 # About Me
