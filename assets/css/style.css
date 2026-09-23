@@ -362,6 +362,18 @@ article video {
 
   main {
     padding: 1.25rem;
+
+    .nav-icon {
+    display: inline-block;
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  .nav-link-external {
+    padding: 0.4rem 0.55rem;
+  }
 /* ---------- Blog archive list ---------- */
 .archive-list {
   list-style: none;
