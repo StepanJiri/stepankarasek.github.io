@@ -343,20 +343,25 @@ article video {
   .header-right {
     width: 100%;
     justify-content: flex-start;
+    gap: 0.4rem;
+  }
+
+  .site-brand {
+    font-size: 1.05rem;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.4rem;
+  }
+
+  .nav-link-external {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
   }
 
   main {
     padding: 1.25rem;
-  }
-
-  h1 { font-size: 1.8rem; }
-  .full-post h2,
-  .post-content .article-title { font-size: 1.6rem; }
-
-  .post-list {
-    grid-template-columns: 1fr;
-  }
-}
 /* ---------- Blog archive list ---------- */
 .archive-list {
   list-style: none;
