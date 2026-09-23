@@ -21,5 +21,9 @@ I make [games](https://jirka-karasek.itch.io/)
 
 I love to reference lyrics from Bob Dylan, Jesse Wells, Neil Young, Goose and the Beatles.
 
+I also upload the audio part from my videos to most podcast apps. I upload only long thinking episodes there. Opinions on one very specific thing are on my YouTube. 
+
+If I believe that the best way to communicate about something is via text, I will use this website. 
+
 ![Inline Image Description]({{ '/assets/images/About_Me/Photo1_1,2.webp' | relative_url }})
 
