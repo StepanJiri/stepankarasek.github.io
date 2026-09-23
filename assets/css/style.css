@@ -322,6 +322,11 @@ article video {
   padding: 1.5rem 2rem;
 }
 
+.footer-rss {
+  color: inherit;
+  text-decoration: underline;
+}
+
 /* ---------- Mobile ---------- */
 @media (max-width: 640px) {
   .site-header {
