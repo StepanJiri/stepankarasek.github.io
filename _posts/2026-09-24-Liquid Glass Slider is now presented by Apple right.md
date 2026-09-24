@@ -3,7 +3,7 @@ layout: post
 title: "Liquid Glass Slider is now presented right"
 ---
 
-I made a [video](https://youtu.be/GYbHNvlIrgM)) about the Liquid Glass slider and how in WWDC 26 it looked different from OS27. 
+I made a [video](https://youtu.be/GYbHNvlIrgM) about the Liquid Glass slider and how in WWDC 26 it looked different from OS27. 
 
 
 ![Inline Image Description]({{ 'assets/images/Liquid Glass is now shown by Apple correctly in Keynote./WWDC_Middle.jpg' | relative_url }})
