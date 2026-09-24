@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Liquid Glass Slider is now presented by Apple right"
+title: "Liquid Glass Slider is now presented right"
 ---
 
 I made a video about the Liquid Glass slider and how in WWDC 26 it looked different from OS27. 
