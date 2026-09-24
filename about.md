@@ -25,6 +25,8 @@ I also upload the audio part from my videos to most podcast apps. I upload only 
 
 If I believe that the best way to communicate about something is via text, I will use this website. 
 
+Here is my mail: rubicon.revisited@icloud.com
+
 ## Photos
 ![Inline Image Description]({{ '/assets/images/About_Me/Photo1_1,2.webp' | relative_url }})
 
