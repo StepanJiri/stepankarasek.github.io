@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Second"
+title: "Title: "Liquid Glass Slider is now presented by Apple right."
 ---
 
 Your text goes here...
