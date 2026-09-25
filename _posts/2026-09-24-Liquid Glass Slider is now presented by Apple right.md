@@ -16,9 +16,7 @@ If you want to understand the full context, I suggest you watch the video. But s
 
 Now, after the September [Apple Keynote](https://www.youtube.com/live/39BalPDuTo0?si=Ox4T0XYsJmYL942N&t=1662), I found out that around 27:45 Kaiann Drance speaks briefly about new iOS 27 features and mentions the Liquid Glass slider. 
 
-And now it is a normal iOS slider. 
+And now it is a normal iOS slider. But it has different photo example. 
 ![Inline Image Description]({{ 'assets/images/Liquid Glass is now shown by Apple correctly in Keynote./SeptemberKeynote26.jpg' | relative_url }})
-But it has different photo example. 
-
 
 
