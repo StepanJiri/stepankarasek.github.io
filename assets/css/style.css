@@ -321,17 +321,19 @@ article video {
 .archive-item {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
   gap: 1rem;
   padding: 0.6rem 0;
   border-bottom: 1px solid var(--border);
 }
 
 .archive-date {
-  flex: 0 0 110px;
+  flex: none;
+  white-space: nowrap;
+  text-align: right;
   color: #b3b3b3;
   font-size: 0.85rem;
 }
-
 .archive-title {
   color: var(--fg);
   text-decoration: none;
