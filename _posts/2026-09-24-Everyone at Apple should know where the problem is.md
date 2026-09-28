@@ -1,0 +1,8 @@
+Muscle memory is totally broken on iPad in the Camera app. If the Camera app recognizes text, a new Read Text button appears. That means the single most important button, the SHUTTER BUTTON, moves down.
+
+To add to the annoyance, when text is recognized, the flip camera button now sits in the spot where the shutter button used to be. So you get a jump scare from your own face.
+
+I understand Apple needs to keep the UI simple and not clutter it with actions, especially ones that can't be used at the moment. Yet the [HIG](https://developer.apple.com/design/human-interface-guidelines/tab-bars#:~:text=happen.-,Don’t%20disable%20or%20hide,its%20content%20is%20unavailable.,-Include) says buttons should stay visible even when they're unavailable. That guidance is about tab bars, but the same logic applies here.
+
+How could this get through QA?
+
