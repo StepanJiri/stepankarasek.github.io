@@ -19,22 +19,15 @@
 
       <nav class="sidebar-nav">
         <a href="{{ '/blog/' | relative_url }}"
-           class="nav-link {% if page.url contains '/blog' or page.layout == 'post' %}active{% endif %}">Blog</a>
+           class="nav-link {% if page.url contains '/blog' or page.layout == 'post' %}active{% endif %}">Blog Archive</a>
 
         <a href="{{ '/about/' | relative_url }}"
            class="nav-link {% if page.url contains '/about' %}active{% endif %}">About Me</a>
 
-        <div class="sidebar-divider"></div>
-
-        <a href="https://mastodon.social/@StepanJiriKarasek" class="nav-link" target="_blank" rel="noopener">Mastodon</a>
-        <a href="{{ '/youtube/' | relative_url }}" class="nav-link" target="_blank" rel="noopener">Videos</a>
-        <a href="{{ '/podcast/' | relative_url }}" class="nav-link" target="_blank" rel="noopener">Podcast</a>
-        <a href="https://jirka-karasek.itch.io" class="nav-link" target="_blank" rel="noopener">Games</a>
-
-        {% unless page.hide_rss %}
-        <div class="sidebar-divider"></div>
-        <a href="{{ '/feed.xml' | relative_url }}" class="nav-link footer-rss">RSS</a>
-        {% endunless %}
+        <a href="https://mastodon.social/@StepanJiriKarasek" class="nav-link nav-caps" target="_blank" rel="noopener">Mastodon</a>
+        <a href="{{ '/youtube/' | relative_url }}" class="nav-link nav-caps" target="_blank" rel="noopener">Videos</a>
+        <a href="{{ '/podcast/' | relative_url }}" class="nav-link nav-caps" target="_blank" rel="noopener">Podcast</a>
+        <a href="https://jirka-karasek.itch.io" class="nav-link nav-caps" target="_blank" rel="noopener">Games</a>
       </nav>
     </aside>
 
