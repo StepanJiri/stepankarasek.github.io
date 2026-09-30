@@ -378,3 +378,38 @@ article video {
     text-align: left;
   }
 }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .page-wrap {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .sidebar {
+    flex: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 1.25rem 1rem;
+  }
+
+  .site-brand {
+    margin-bottom: 0.75rem;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+
+  .sidebar-divider,
+  .nav-caps {
+    display: none;
+  }
+
+  main {
+    padding: 1.5rem 1.25rem;
+    max-width: 100%;
+  }
+}
