@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The iPad Camera App moves shutter button"
+date: 2026-09-28 14:32:00 +0200
 ---
 Muscle memory is totally broken on iPad in the Camera app. If the Camera app recognizes text, a new Read Text button appears. That means the single most important button, the SHUTTER BUTTON, moves down.
 
