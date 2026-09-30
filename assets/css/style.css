@@ -43,9 +43,6 @@ a { color: var(--accent); }
 
 .sidebar {
   flex: 0 0 200px;
-  position: sticky;
-  top: 0;
-  height: 100vh;
   padding: 2.5rem 1.5rem 1.5rem;
   border-right: 1px solid var(--border);
   display: flex;
@@ -101,7 +98,7 @@ a { color: var(--accent); }
 /* ---------- Main / typography ---------- */
 main {
   flex: 1;
-  max-width: 640px;
+  max-width: 58ch;
   padding: 2.5rem 2rem;
 }
 
