@@ -88,14 +88,10 @@ a { color: var(--accent); }
   font-weight: 600;
 }
 
-.sidebar-divider {
-  border-top: 1px solid var(--border);
-  margin: 1rem 0;
-}
-
-.footer-rss {
-  color: var(--muted);
-  text-decoration: underline;
+.nav-caps {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
 }
 
 /* ---------- Main / typography ---------- */
