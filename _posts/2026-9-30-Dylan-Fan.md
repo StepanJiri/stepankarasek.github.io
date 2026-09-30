@@ -27,3 +27,5 @@ In case you don't know, I am a huge Dylan fan. If you aren't familiar with his w
   mq.addEventListener('change', e => setTheme(e.matches));
 })();
 </script>
+
+<!-- https://www.youtube.com/watch?v=n0RMqPjFB9c/ iTunes Ping demo/ 3:40/ Steve Jobs post  -->
