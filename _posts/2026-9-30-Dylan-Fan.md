@@ -8,7 +8,7 @@ In case you don't know, I am a huge Dylan fan. If you aren't familiar with his w
 
 <iframe 
   id="dylan-album-embed"
-  height="150" 
+  height="100" 
   style="width: 100%; max-width: 660px; border-radius: 12px; border: none;" 
   allow="autoplay *; encrypted-media *;">
 </iframe>
