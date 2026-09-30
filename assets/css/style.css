@@ -85,7 +85,11 @@ a { color: var(--accent); }
 
 .nav-link.active {
   color: var(--accent);
-  font-weight: 600;
+}
+
+.sidebar-divider {
+  border-top: 1px solid var(--border);
+  margin: 1rem 0;
 }
 
 .nav-caps {
