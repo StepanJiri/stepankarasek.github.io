@@ -21,8 +21,10 @@
         <a href="{{ '/blog/' | relative_url }}"
            class="nav-link {% if page.url contains '/blog' or page.layout == 'post' %}active{% endif %}">Blog Archive</a>
 
-        <a href="{{ '/about/' | relative_url }}"
-           class="nav-link {% if page.url contains '/about' %}active{% endif %}">About Me</a>
+     <a href="{{ '/about/' | relative_url }}"
+   class="nav-link {% if page.url contains '/about' %}active{% endif %}">About Me</a>
+
+<div class="sidebar-divider"></div>
 
         <a href="https://mastodon.social/@StepanJiriKarasek" class="nav-link nav-caps" target="_blank" rel="noopener">Mastodon</a>
         <a href="{{ '/youtube/' | relative_url }}" class="nav-link nav-caps" target="_blank" rel="noopener">Videos</a>
