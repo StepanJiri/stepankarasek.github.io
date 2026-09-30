@@ -6,41 +6,41 @@
   <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
   {% feed_meta %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-left">
+  <div class="page-wrap">
+    <aside class="sidebar">
       <a class="site-brand {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
-      <nav class="site-nav">
+      <nav class="sidebar-nav">
         <a href="{{ '/blog/' | relative_url }}"
            class="nav-link {% if page.url contains '/blog' or page.layout == 'post' %}active{% endif %}">Blog</a>
 
         <a href="{{ '/about/' | relative_url }}"
            class="nav-link {% if page.url contains '/about' %}active{% endif %}">About Me</a>
+
+        <div class="sidebar-divider"></div>
+
+        <a href="https://mastodon.social/@StepanJiriKarasek" class="nav-link" target="_blank" rel="noopener">Mastodon</a>
+        <a href="{{ '/youtube/' | relative_url }}" class="nav-link" target="_blank" rel="noopener">Videos</a>
+        <a href="{{ '/podcast/' | relative_url }}" class="nav-link" target="_blank" rel="noopener">Podcast</a>
+        <a href="https://jirka-karasek.itch.io" class="nav-link" target="_blank" rel="noopener">Games</a>
+
+        {% unless page.hide_rss %}
+        <div class="sidebar-divider"></div>
+        <a href="{{ '/feed.xml' | relative_url }}" class="nav-link footer-rss">RSS</a>
+        {% endunless %}
       </nav>
-    </div>
-<div class="header-right">
-  <a href="https://mastodon.social/@StepanJiriKarasek" class="nav-link nav-link-external" target="_blank" rel="noopener">Mastodon</a>
-  <a href="{{ '/youtube/' | relative_url }}" class="nav-link nav-link-external" target="_blank" rel="noopener">Videos</a>
-  <a href="{{ '/podcast/' | relative_url }}" class="nav-link nav-link-external" target="_blank" rel="noopener">Podcast</a>
-  <a href="https://jirka-karasek.itch.io" class="nav-link nav-link-external" target="_blank" rel="noopener">Games</a>
-</div>
-</header>
+    </aside>
 
-  <main>
-    {{ content }}
-  </main>
-
-  <footer class="site-footer">
-    {% unless page.hide_rss %}
-    <p><a href="{{ '/feed.xml' | relative_url }}" class="footer-rss">RSS</a></p>
-    {% endunless %}
-  </footer>
+    <main>
+      {{ content }}
+    </main>
+  </div>
 </body>
 </html>
