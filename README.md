@@ -12,7 +12,9 @@
 6. Drop images/gifs into `assets/images/` and reference them as
    `/assets/images/filename.gif`.
 
-Hello, this is mostly an AI-coded website. That is not ideal and I know it. But I put effort into visual design. 
+# hello there 
+
+This is mostly an AI-coded website. That is not ideal and I know it. But I put effort into visual design. 
 
 ## The posts will not be AI-generated. 
 At maximum, a grammar check, because I’m not a native English speaker.
