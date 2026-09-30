@@ -10,7 +10,7 @@ permalink: /blog/
   {% for post in site.posts %}
   <li class="archive-item">
     <a href="{{ post.url | relative_url }}" class="archive-title">{{ post.title }}</a>
-    <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+    <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y · %-I:%M %p" }}</time>
   </li>
   {% endfor %}
 </ul>
