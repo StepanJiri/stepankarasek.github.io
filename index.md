@@ -38,5 +38,5 @@ title: Blog
 {% endif %}
 
 <div class="blog-archive-link">
-  <a href="{{ '/blog/' | relative_url }}">View all posts in Blog &rarr;</a>
+  <a href="{{ '/blog/' | relative_url }}">View all posts in Blog Archive &rarr;</a>
 </div>
