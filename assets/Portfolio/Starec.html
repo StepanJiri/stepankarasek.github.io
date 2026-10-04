@@ -19,14 +19,45 @@ permalink: /starec/
     video {
       width: 100vw;
       height: 100vh;
+      height: 100dvh;
       object-fit: contain;
       display: block;
+    }
+    #play-btn {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.9);
+      font-size: 28px;
+      display: none;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop playsinline>
+  <video id="v" muted loop playsinline preload="auto">
     <source src="{{ '/assets/Portfolio/Starec.mp4' | relative_url }}" type="video/mp4">
   </video>
+  <button id="play-btn">▶</button>
+
+  <script>
+    const v = document.getElementById('v');
+    const btn = document.getElementById('play-btn');
+    const p = v.play();
+    if (p !== undefined) {
+      p.catch(() => {
+        btn.style.display = 'block';
+      });
+    }
+    btn.addEventListener('click', () => {
+      v.play();
+      btn.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
