@@ -20,6 +20,19 @@
     <aside class="sidebar">
       <a class="site-brand {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
+      <select id="font-select" style="margin-bottom:1.5rem;padding:0.3rem 0.4rem;font-size:0.85rem;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--fg);">
+        <option value="">Default (site)</option>
+        <option value="Arial, sans-serif">Arial</option>
+        <option value="'Times New Roman', serif">Times New Roman</option>
+        <option value="'Montserrat', sans-serif">Montserrat</option>
+        <option value="Georgia, serif">Georgia</option>
+        <option value="'Poppins', sans-serif">Poppins</option>
+        <option value="'Inter', sans-serif">Inter</option>
+        <option value="'Space Grotesk', sans-serif">Space Grotesk</option>
+        <option value="'Playfair Display', serif">Playfair Display</option>
+        <option value="'IBM Plex Sans', sans-serif">IBM Plex Sans</option>
+      </select>
+
       <nav class="sidebar-nav">
         <a href="{{ '/blog/' | relative_url }}"
            class="nav-link {% if page.url contains '/blog' or page.layout == 'post' %}active{% endif %}">Blog Archive</a>
@@ -35,6 +48,30 @@
         <a href="https://jirka-karasek.itch.io" class="nav-link nav-caps" target="_blank" rel="noopener">Games</a>
       </nav>
     </aside>
+
+    <main>
+      {{ content }}
+    </main>
+  </div>
+
+  <script>
+  (function() {
+    const select = document.getElementById('font-select');
+    const saved = localStorage.getItem('dev-font');
+    if (saved) {
+      document.body.style.fontFamily = saved;
+      select.value = saved;
+    }
+    select.addEventListener('change', function() {
+      const val = this.value;
+      document.body.style.fontFamily = val;
+      if (val) localStorage.setItem('dev-font', val);
+      else localStorage.removeItem('dev-font');
+    });
+  })();
+  </script>
+</body>
+</html>    </aside>
 
     <main>
       {{ content }}
