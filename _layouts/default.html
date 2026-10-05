@@ -11,27 +11,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
   {% feed_meta %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Inter:wght@400;700&family=Space+Grotesk:wght@400;700&family=Playfair+Display:wght@400;700&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="page-wrap">
     <aside class="sidebar">
       <a class="site-brand {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-
-      <select id="font-select" style="margin-bottom:1.5rem;padding:0.3rem 0.4rem;font-size:0.85rem;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--fg);">
-        <option value="">Default (site)</option>
-        <option value="Arial, sans-serif">Arial</option>
-        <option value="'Times New Roman', serif">Times New Roman</option>
-        <option value="'Montserrat', sans-serif">Montserrat</option>
-        <option value="Georgia, serif">Georgia</option>
-        <option value="'Poppins', sans-serif">Poppins</option>
-        <option value="'Inter', sans-serif">Inter</option>
-        <option value="'Space Grotesk', sans-serif">Space Grotesk</option>
-        <option value="'Playfair Display', serif">Playfair Display</option>
-        <option value="'IBM Plex Sans', sans-serif">IBM Plex Sans</option>
-      </select>
 
       <nav class="sidebar-nav">
         <a href="{{ '/blog/' | relative_url }}"
@@ -53,62 +37,5 @@
       {{ content }}
     </main>
   </div>
-
-  <script>
-  (function() {
-    const select = document.getElementById('font-select');
-    const saved = localStorage.getItem('dev-font');
-    if (saved) {
-      document.body.style.fontFamily = saved;
-      select.value = saved;
-    }
-    select.addEventListener('change', function() {
-      const val = this.value;
-      document.body.style.fontFamily = val;
-      if (val) localStorage.setItem('dev-font', val);
-      else localStorage.removeItem('dev-font');
-    });
-  })();
-  </script>
-</body>
-</html>    </aside>
-
-    <main>
-      {{ content }}
-    </main>
-  </div>
-
-  <div id="font-switcher" style="position:fixed;bottom:16px;right:16px;z-index:9999;background:#fff;color:#111;border:1px solid #ccc;border-radius:8px;padding:8px 10px;font-family:Arial,sans-serif;font-size:13px;box-shadow:0 2px 10px rgba(0,0,0,0.15);">
-    <label for="font-select" style="margin-right:6px;">Font:</label>
-    <select id="font-select">
-      <option value="">Default (site)</option>
-      <option value="Arial, sans-serif">Arial</option>
-      <option value="'Times New Roman', serif">Times New Roman</option>
-      <option value="'Montserrat', sans-serif">Montserrat</option>
-      <option value="Georgia, serif">Georgia</option>
-      <option value="'Poppins', sans-serif">Poppins</option>
-      <option value="'Inter', sans-serif">Inter</option>
-      <option value="'Space Grotesk', sans-serif">Space Grotesk</option>
-      <option value="'Playfair Display', serif">Playfair Display</option>
-      <option value="'IBM Plex Sans', sans-serif">IBM Plex Sans</option>
-    </select>
-  </div>
-
-  <script>
-  (function() {
-    const select = document.getElementById('font-select');
-    const saved = localStorage.getItem('dev-font');
-    if (saved) {
-      document.body.style.fontFamily = saved;
-      select.value = saved;
-    }
-    select.addEventListener('change', function() {
-      const val = this.value;
-      document.body.style.fontFamily = val;
-      if (val) localStorage.setItem('dev-font', val);
-      else localStorage.removeItem('dev-font');
-    });
-  })();
-  </script>
 </body>
 </html>
