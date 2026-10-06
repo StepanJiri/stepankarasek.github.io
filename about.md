@@ -28,5 +28,5 @@ If I believe that the best way to communicate about something is via text, I wil
 Here is my mail: rubicon.revisited@icloud.com
 
 ## Photos
-![Inline Image Description]({{ '/assets/images/About_Me/Photo1_1,2.webp' | relative_url }})
+![Daniel Darby Supik]({{ '/assets/images/About_Me/Photo1_1,2.webp' | relative_url }})
 
