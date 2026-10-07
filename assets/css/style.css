@@ -50,7 +50,7 @@ a { color: var(--accent); }
 }
 
 .site-brand {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1.15rem;
   text-decoration: none;
   color: var(--fg);
@@ -66,26 +66,30 @@ a { color: var(--accent); }
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
+  margin: 0 -0.75rem;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--fg);
   font-size: 0.95rem;
-  padding: 0.35rem 0;
-  transition: color 0.15s ease;
+  font-weight: 400;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .nav-link:hover {
-  color: var(--accent);
+  background-color: #ffffff;
+  color: #111111;
 }
 
 .nav-link.active {
-  color: var(--accent);
+  background-color: var(--accent);
+  color: #111111;
 }
 
 .sidebar-divider {
-  border-top: 1px solid var(--border);
   margin: 1rem 0;
 }
 
