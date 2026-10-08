@@ -31,5 +31,5 @@ Here is my mail: rubicon.revisited@icloud.com
 ![Daniel Darby Supik]({{ '/assets/images/About_Me/Photo1_1,2.webp' | relative_url }})
 
 
-
+### Privacy Report 
 On this website I use [Goatcounter](https://www.goatcounter.com). It is open source, simple, privacy-first analytics. It shows me how many people visited this website and from what country and what browser and more things like this. __There is no tracking across websites at all.__ I don't sell it to anyone. 
