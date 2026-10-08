@@ -5,5 +5,4 @@ permalink: /portfolio/
 ---
 
 # Portfolio
-
-A collection of work — games, videos, and other projects.
+Hi, my name is Štěpán Jiří Karásek. 
