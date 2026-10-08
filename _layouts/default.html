@@ -24,6 +24,9 @@
         <a href="{{ '/about/' | relative_url }}"
            class="nav-link {% if page.url contains '/about' %}active{% endif %}">About Me</a>
 
+        <a href="{{ '/portfolio/' | relative_url }}"
+           class="nav-link {% if page.url contains '/portfolio' %}active{% endif %}">Portfolio</a>
+
         <div class="sidebar-divider"></div>
 
         <a href="https://mastodon.social/@StepanJiriKarasek" class="nav-link nav-caps" target="_blank" rel="noopener">Mastodon</a>
@@ -37,5 +40,8 @@
       {{ content }}
     </main>
   </div>
+
+  <script data-goatcounter="https://YOURCODE.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
