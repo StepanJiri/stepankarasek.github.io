@@ -28,8 +28,12 @@ If I believe that the best way to communicate about something is via text, I wil
 Here is my mail: rubicon.revisited@icloud.com
 
 ## Photos
-![Daniel Darby Supik]({{ '/assets/images/About_Me/Photo1_1,2.webp' | relative_url }})
+![Daniel Darby Supik]({{ '/assets/images/About_Me/Phone and ATP  1 Photo.webp' | relative_url }})
 ###### Photo by Daniel Darby Supik / (2026-09-19)
+![Daniel Darby Supik]({{ 'assets/images/About_Me/Hoodie and long ear.webp' | relative_url }})
+###### Photo by Daniel Darby Supik / (2026-05-16)
+![Daniel Darby Supik]({{ 'assets/images/About_Me/Green Winter Crop.webp' | relative_url }})
+###### Photo by Daniel Darby Supik / (2026-02-17) BTW Daniel is not my personal photographer.
 
 
 
