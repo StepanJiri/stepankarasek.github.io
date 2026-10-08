@@ -16,6 +16,8 @@ If I believe that the best way to communicate about something is via text, I wil
 
 Here is my mail: rubicon.revisited@icloud.com
 
+If you are interested, here is my [portfolio](https://rubiconrevisited.com/portfolio/). Mostly, it is just things you can see on my itch.io or YouTube but with more text.
+
 ## Photos
 ![Daniel Darby Supik]({{ '/assets/images/About_Me/Phone and ATP  1 Photo.webp' | relative_url }})
 ###### Photo by Daniel Darby Supik / (2026-09-19)
