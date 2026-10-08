@@ -8,7 +8,7 @@ hide_rss: true
 
 Hi, welcome to my page. Here I write about what I find interesting. 
 
-You can find me on [Mastodon](https://mastodon.social/@yourusername), [Youtube](https://www.youtube.com/channel/UCNr3EHRzIhJ2l8KLF9SlgFw), [itch.io](https://jirka-karasek.itch.io/) and [podcast](https://rubiconrevisited.com/podcast/).
+You can find me on [Mastodon](https://mastodon.social/@StepanJiriKarasek), [Youtube](https://www.youtube.com/channel/UCNr3EHRzIhJ2l8KLF9SlgFw), [itch.io](https://jirka-karasek.itch.io/) and [podcast](https://rubiconrevisited.com/podcast/).
 
 I love to reference lyrics from *Bob Dylan, Jesse Wells, Neil Young, Goose and the Beatles.*
 
