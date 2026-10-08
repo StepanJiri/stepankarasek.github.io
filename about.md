@@ -29,7 +29,7 @@ Here is my mail: rubicon.revisited@icloud.com
 
 ## Photos
 ![Daniel Darby Supik]({{ '/assets/images/About_Me/Photo1_1,2.webp' | relative_url }})
-###### Photo by Daniel Darby Supik
+###### Photo by Daniel Darby Supik / (2026-09-19)
 
 
 
