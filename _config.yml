@@ -28,3 +28,6 @@ exclude:
 
 plugins:
   - jekyll-feed
+
+feed:
+  icon: /assets/favicon/apple-touch-icon.png
