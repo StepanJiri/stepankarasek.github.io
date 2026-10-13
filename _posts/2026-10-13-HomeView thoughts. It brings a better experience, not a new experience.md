@@ -8,7 +8,7 @@ First, I like the name. It is for a home, it has a display, and it sees. So I am
 
 It should have Face ID. Relying on camera recognition and nearby devices is not cool. But maybe the LiDAR sensor doesn't have a long enough range. And the price may be a reason too.
 
-In this three-minute video by Apple, there is not a single thing done on HomeView that couldn't be done on an iPhone or even an Apple Watch. Yes, it has a bigger display, so more people can look at it than at the small Apple Watch, and especially the camera view. So it brings a better experience, not a new experience.
+In this three-minute [video](https://youtu.be/hkrYiZ_g9tw?si=p4rOrqzkphsJWLou) by Apple, there is not a single thing done on HomeView that couldn't be done on an iPhone or even an Apple Watch. Yes, it has a bigger display, so more people can look at it than at the small Apple Watch, and especially the camera view. So it brings a better experience, not a new experience.
 
 In the same video I did not see a single Apple Watch, iPhone, iPad, Mac, etc. I wonder why. Okay, an AirTag was there.
 
@@ -20,7 +20,7 @@ Using iMessage on this thing is crazy and pointless. I understand Siri prompting
 
 They have a table made just for the cable to get through and plug in the HomeView. I am so happy that it doesn't have a fixed USB-C cable like the HomePod mini does.
 
-In this next screenshot: On the left is Apple Music. How do you favorite the song? What does the popup menu look like? What does the top left music button do? I read this a few days ago and I wonder if the controls disappear after some time. The HomeView on the right looks like Google's Material or something like that to me.
+In this next screenshot: On the left is Apple Music. How do you favorite the song? What does the popup menu look like? What does the top left music button do? I read [this](https://mastodon.social/@cassey@ottawa.place/117419774372396285) a few days ago and I wonder if the controls disappear after some time. The HomeView on the right looks like Google's Material or something like that to me.
 ￼![Inline Image Description]({{ 'assets/images/Homeview_1.jpg' | relative_url }})
 
 But all around, I love Apple doing new things. Three years ago, if you had told me that within a year Apple would make a cheaper MacBook, a folding iPhone and a HomePod with a screen, I would not have believed you.
