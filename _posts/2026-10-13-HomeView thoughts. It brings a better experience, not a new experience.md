@@ -23,4 +23,6 @@ They have a table made just for the cable to get through and plug in the HomeVie
 In this next screenshot: On the left is Apple Music. How do you favorite the song? What does the popup menu look like? What does the top left music button do? I read [this](https://mastodon.social/@cassey@ottawa.place/117419774372396285) a few days ago and I wonder if the controls disappear after some time. The HomeView on the right looks like Google's Material or something like that to me.
 ￼![Inline Image Description]({{ 'assets/images/Homeview_1.jpg' | relative_url }})
 
+I like the CarPlay integration of apps. I also like that Apple is reusing Apple Watch faces and all the widgets. Apple is the company that can do this. They have been preparing for this for years, and it shows.
+The hardware looks nice and modern. I don't know if the holes will get filled up and messy in a kitchen. Shame is that it doesn't rotate on its own. And the bezels could be smaller. You don't need big bezels for fat fingers like the iPad has
 But all around, I love Apple doing new things. Three years ago, if you had told me that within a year Apple would make a cheaper MacBook, a folding iPhone and a HomePod with a screen, I would not have believed you.
