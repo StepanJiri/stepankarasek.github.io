@@ -10,4 +10,4 @@ Apple has been showing real craftsmanship in its recent ads, like the making of 
 
 This ad adds real human life, which is great to see from Apple. It even shows someone using the bathroom (remember the HomePod mini mockup house that had no bathroom?) and has a bit of a romantic side.
 
-The ad doesn’t present the family as perfect. They’re humans at the end of the day. The only perfect thing is the all-new $399 device from Apple. Maybe that’s the point of an ad.
+The ad doesn’t present the family as perfect. They’re humans at the end of the day. The only perfect thing is the all-new $299 device from Apple. Maybe that’s the point of an ad.
