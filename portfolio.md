@@ -14,8 +14,11 @@ I very strongly believe that story and visuals are not as important as the game 
 
 I work in Unreal Engine and use Blueprints. 
 
-I have visited an over four game jam. It was over weekend and most of the time I was the programer. It was team of four and as team we come up with the idea. My most favourite project from game jam is free  mind (two spaces between words and small f is not a type.) 
+I have visited an over four game jam. It was over weekend and most of the time I was the programer. It was team of four and as team we come up with the idea. My most favourite project from game jam is [free  mind](https://jirka-karasek.itch.io/free-mind) (small f is not a type and two spaces between words.) 
 
+My two big project Rubicon and Shift are made with care for game design. 
+
+Shift is my first finished video game. It is 2D platformer where player can teleport to an orb. But the orbs come in different styles, one stays on one place, one switches places instantly, one constantly moves, and the last one player control by moving around.
 ## Video
 
 
