@@ -16,7 +16,6 @@
   <div class="page-wrap">
     <aside class="sidebar">
       <a class="site-brand {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <div class="site-subtitle">Štěpán Jiří Karásek</div>
 
       <nav class="sidebar-nav">
         <a href="{{ '/blog/' | relative_url }}"
@@ -24,9 +23,6 @@
 
         <a href="{{ '/about/' | relative_url }}"
            class="nav-link {% if page.url contains '/about' %}active{% endif %}">About Me</a>
-
-        <a href="{{ '/portfolio/' | relative_url }}"
-           class="nav-link {% if page.url contains '/portfolio' %}active{% endif %}">Portfolio</a>
 
         <div class="sidebar-divider"></div>
 
