@@ -274,9 +274,10 @@ gap: 0.3rem;
 }
 
 .post-links-list a {
-font-size: 0.85rem;
+font-size: 0.8rem;
 color: var(--muted);
 text-decoration: underline;
+word-break: break-all;
 }
 
 .post-links-list a:hover {
