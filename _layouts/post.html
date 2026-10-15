@@ -11,9 +11,9 @@ layout: default
     {{ content }}
   </div>
 
-  <div id="post-links" class="post-links"></div>
+  <p class="post-back"><a href="{{ '/blog/' | relative_url }}">&larr; Blog Archive</a></p>
 
-  <p class="post-back"><a href="{{ '/blog/' | relative_url }}">&larr; Back to blog</a></p>
+  <div id="post-links" class="post-links"></div>
 </article>
 
 <script>
@@ -30,15 +30,15 @@ layout: default
     var href = a.getAttribute('href');
     if (!seen[href]) {
       seen[href] = true;
-      links.push({ href: href, text: a.textContent.trim() || href });
+      links.push(href);
     }
   });
 
   if (links.length === 0) return;
 
   var html = '<p class="post-links-label">Links in this article</p><ul class="post-links-list">';
-  links.forEach(function (link) {
-    html += '<li><a href="' + link.href + '" target="_blank" rel="noopener">' + link.text + '</a></li>';
+  links.forEach(function (href) {
+    html += '<li><a href="' + href + '" target="_blank" rel="noopener">' + href + '</a></li>';
   });
   html += '</ul>';
 
