@@ -250,6 +250,39 @@ font-size: 0.9rem;
 margin: 0.75rem 0 1.5rem;
 }
 
+.post-links {
+margin-top: 2rem;
+padding-top: 1rem;
+border-top: 1px solid var(--border);
+}
+
+.post-links-label {
+font-size: 0.8rem;
+color: var(--muted);
+text-transform: uppercase;
+letter-spacing: 0.03em;
+margin: 0 0 0.4rem 0;
+}
+
+.post-links-list {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: 0.3rem;
+}
+
+.post-links-list a {
+font-size: 0.85rem;
+color: var(--muted);
+text-decoration: underline;
+}
+
+.post-links-list a:hover {
+color: var(--accent);
+}
+
 /* ---------- Blog listing (card grid, if still used anywhere) ---------- */
 .post-list {
 display: grid;
