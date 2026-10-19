@@ -302,7 +302,7 @@ gap: 0.1rem;
 font-size: 1.05rem;
 font-weight: 600;
 color: var(--fg);
-text-decoration: underline;
+text-decoration: none;
 }
 
 .post-links-list a:hover {
