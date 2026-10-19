@@ -20,7 +20,7 @@ Using iMessage on this thing is crazy and pointless. I understand Siri prompting
 
 They have a table made just for the cable to get through and plug in the HomeView. I am so happy that it doesn't have a fixed USB-C cable like the HomePod mini does.
 
-In this next screenshot: On the left is Apple Music. How do you favorite the song? What does the popup menu look like? What does the top left music button do? I read [this](https://mastodon.social/@cassey@ottawa.place/117419774372396285) a few days ago and I wonder if the controls disappear after some time. The HomeView on the right looks like Google's Material or something like that to me.
+In this next screenshot: On the left is Apple Music. How do you favorite the song? How does the popup menu look like? What does the top left music button do? I read [this](https://mastodon.social/@cassey@ottawa.place/117419774372396285) a few days ago and I wonder if the controls disappear after some time. The HomeView on the right looks like Google's Material or something like that to me.
 ￼![Inline Image Description]({{ 'assets/images/Homeview_1.jpg' | relative_url }})
 
 I like the CarPlay integration of apps. I also like that Apple is reusing Apple Watch faces and all the widgets. Apple is the company that can do this. They have been preparing for this for years, and it shows.
