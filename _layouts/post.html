@@ -11,15 +11,11 @@ layout: default
     {{ content }}
   </div>
 
-  <div class="post-footer-row">
-    <a href="{{ '/blog/' | relative_url }}" class="post-back">&larr; Blog Archive</a>
-    <button type="button" id="post-links-toggle" class="post-links-toggle" aria-expanded="false" aria-controls="post-links" aria-label="Show links in this post" style="display:none;">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11.5 4.5"></path>
-        <path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 0 0 7.07 7.07L12.5 19.5"></path>
-      </svg>
-    </button>
-  </div>
+  <p class="post-back"><a href="{{ '/blog/' | relative_url }}">&larr; Blog Archive</a></p>
+
+  <p class="post-links-reveal" id="post-links-reveal" style="display:none;">
+    <a href="#" id="post-links-reveal-link">Show links</a>
+  </p>
 
   <div id="post-links" class="post-links" hidden></div>
 </article>
@@ -28,8 +24,9 @@ layout: default
 (function () {
   var content = document.getElementById('post-content');
   var container = document.getElementById('post-links');
-  var toggle = document.getElementById('post-links-toggle');
-  if (!content || !container || !toggle) return;
+  var revealWrap = document.getElementById('post-links-reveal');
+  var revealLink = document.getElementById('post-links-reveal-link');
+  if (!content || !container || !revealWrap || !revealLink) return;
 
   function addFastTip(a, text) {
     if (!text) return;
@@ -60,7 +57,7 @@ layout: default
 
   if (links.length === 0) return;
 
-  toggle.style.display = '';
+  revealWrap.style.display = '';
 
   var heading = document.createElement('p');
   heading.className = 'post-links-label';
@@ -91,17 +88,10 @@ layout: default
 
   container.appendChild(list);
 
-  toggle.addEventListener('click', function () {
-    var isHidden = container.hasAttribute('hidden');
-    if (isHidden) {
-      container.removeAttribute('hidden');
-      toggle.setAttribute('aria-expanded', 'true');
-      toggle.classList.add('is-open');
-    } else {
-      container.setAttribute('hidden', '');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.classList.remove('is-open');
-    }
+  revealLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    container.removeAttribute('hidden');
+    revealWrap.style.display = 'none';
   });
 })();
 </script>
