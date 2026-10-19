@@ -30,18 +30,57 @@ layout: default
     var href = a.getAttribute('href');
     if (!seen[href]) {
       seen[href] = true;
-      links.push(href);
+      links.push({ href: href, label: a.textContent.trim() || href });
     }
   });
 
   if (links.length === 0) return;
 
-  var html = '<p class="post-links-label">Links in this article</p><ul class="post-links-list">';
-  links.forEach(function (href) {
-    html += '<li><a href="' + href + '" target="_blank" rel="noopener">' + href + '</a></li>';
-  });
-  html += '</ul>';
+  var label = document.createElement('p');
+  label.className = 'post-links-label';
+  label.textContent = 'Links in this article';
+  container.appendChild(label);
 
-  container.innerHTML = html;
+  var list = document.createElement('ul');
+  list.className = 'post-links-list';
+
+  links.forEach(function (link) {
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.href = link.href;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.title = link.href;
+    a.dataset.label = link.label;
+    a.textContent = link.label;
+    li.appendChild(a);
+    list.appendChild(li);
+  });
+
+  container.appendChild(list);
+
+  var linkEls = list.querySelectorAll('a');
+
+  function showUrls() {
+    linkEls.forEach(function (a) {
+      a.textContent = a.getAttribute('href');
+    });
+  }
+
+  function showLabels() {
+    linkEls.forEach(function (a) {
+      a.textContent = a.dataset.label;
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Control' || e.key === 'Meta') showUrls();
+  });
+
+  document.addEventListener('keyup', function (e) {
+    if (e.key === 'Control' || e.key === 'Meta') showLabels();
+  });
+
+  window.addEventListener('blur', showLabels);
 })();
 </script>
