@@ -30,7 +30,9 @@ layout: default
     var href = a.getAttribute('href');
     if (!seen[href]) {
       seen[href] = true;
-      links.push({ href: href, label: a.textContent.trim() || href });
+      var customLabel = a.getAttribute('title');
+      var label = (customLabel && customLabel.trim()) ? customLabel.trim() : (a.textContent.trim() || href);
+      links.push({ href: href, label: label });
     }
   });
 
