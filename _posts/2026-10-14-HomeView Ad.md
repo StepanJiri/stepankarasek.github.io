@@ -4,7 +4,7 @@ title: "HomeView Ad"
 date: 2026-10-14 19:55:00 +0200
 ---
 
-About the HomeView [ad](https://www.youtube.com/watch?v=hkrYiZ_g9tw "Apple HomeView ad") I wrote about in my [post](https://rubiconrevisited.com/blog/HomeView-thoughts.-It-brings-a-better-experience,-not-a-new-experience/ "Mastodon post") yesterday: since then, I’ve seen some criticism of it online. The ad is full of chaos, and some people found that stressful.
+About the HomeView [ad](https://www.youtube.com/watch?v=hkrYiZ_g9tw "Welcome Apple HomeView: Designed for life at home. Youtube Video") I wrote about in my [post](https://rubiconrevisited.com/blog/HomeView-thoughts.-It-brings-a-better-experience,-not-a-new-experience/ "Mastodon post") yesterday: since then, I’ve seen some criticism of it online. The ad is full of chaos, and some people found that stressful.
 
 Apple has been showing real craftsmanship in its recent ads, like the making of the Apple logo for this [event](https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/ "Welcome Home Event Applen Newsroom") and the M6 introduction.
 
