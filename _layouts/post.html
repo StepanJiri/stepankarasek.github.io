@@ -11,16 +11,31 @@ layout: default
     {{ content }}
   </div>
 
-  <p class="post-back"><a href="{{ '/blog/' | relative_url }}">&larr; Blog Archive</a></p>
+  <div class="post-footer-row">
+    <a href="{{ '/blog/' | relative_url }}" class="post-back">&larr; Blog Archive</a>
+    <button type="button" id="post-links-toggle" class="post-links-toggle" aria-expanded="false" aria-controls="post-links" aria-label="Show links in this post" style="display:none;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11.5 4.5"></path>
+        <path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 0 0 7.07 7.07L12.5 19.5"></path>
+      </svg>
+    </button>
+  </div>
 
-  <div id="post-links" class="post-links"></div>
+  <div id="post-links" class="post-links" hidden></div>
 </article>
 
 <script>
 (function () {
   var content = document.getElementById('post-content');
   var container = document.getElementById('post-links');
-  if (!content || !container) return;
+  var toggle = document.getElementById('post-links-toggle');
+  if (!content || !container || !toggle) return;
+
+  function addFastTip(a, text) {
+    if (!text) return;
+    a.dataset.tip = text;
+    a.classList.add('has-tip');
+  }
 
   var anchors = content.querySelectorAll('a[href^="http"]');
   var seen = {};
@@ -28,61 +43,65 @@ layout: default
 
   anchors.forEach(function (a) {
     var href = a.getAttribute('href');
+    var customLabel = a.getAttribute('title');
+    var label = (customLabel && customLabel.trim()) ? customLabel.trim() : (a.textContent.trim() || href);
+
+    // Replace the slow native tooltip with a fast custom one.
+    if (customLabel) {
+      a.removeAttribute('title');
+      addFastTip(a, customLabel.trim());
+    }
+
     if (!seen[href]) {
       seen[href] = true;
-      var customLabel = a.getAttribute('title');
-      var label = (customLabel && customLabel.trim()) ? customLabel.trim() : (a.textContent.trim() || href);
       links.push({ href: href, label: label });
     }
   });
 
   if (links.length === 0) return;
 
-  var label = document.createElement('p');
-  label.className = 'post-links-label';
-  label.textContent = 'Links in this article';
-  container.appendChild(label);
+  toggle.style.display = '';
+
+  var heading = document.createElement('p');
+  heading.className = 'post-links-label';
+  heading.textContent = 'Links in this post';
+  container.appendChild(heading);
 
   var list = document.createElement('ul');
   list.className = 'post-links-list';
 
   links.forEach(function (link) {
     var li = document.createElement('li');
+
     var a = document.createElement('a');
     a.href = link.href;
     a.target = '_blank';
     a.rel = 'noopener';
-    a.title = link.href;
-    a.dataset.label = link.label;
     a.textContent = link.label;
+    addFastTip(a, link.href);
     li.appendChild(a);
+
+    var urlLine = document.createElement('span');
+    urlLine.className = 'post-links-url';
+    urlLine.textContent = link.href;
+    li.appendChild(urlLine);
+
     list.appendChild(li);
   });
 
   container.appendChild(list);
 
-  var linkEls = list.querySelectorAll('a');
-
-  function showUrls() {
-    linkEls.forEach(function (a) {
-      a.textContent = a.getAttribute('href');
-    });
-  }
-
-  function showLabels() {
-    linkEls.forEach(function (a) {
-      a.textContent = a.dataset.label;
-    });
-  }
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Control' || e.key === 'Meta') showUrls();
+  toggle.addEventListener('click', function () {
+    var isHidden = container.hasAttribute('hidden');
+    if (isHidden) {
+      container.removeAttribute('hidden');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.classList.add('is-open');
+    } else {
+      container.setAttribute('hidden', '');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.classList.remove('is-open');
+    }
   });
-
-  document.addEventListener('keyup', function (e) {
-    if (e.key === 'Control' || e.key === 'Meta') showLabels();
-  });
-
-  window.addEventListener('blur', showLabels);
 })();
 </script>
