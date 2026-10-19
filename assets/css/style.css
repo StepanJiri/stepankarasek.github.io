@@ -348,6 +348,10 @@ opacity: 1;
 transition-delay: 0.1s;
 }
 
+body.reveal-tips .has-tip::after {
+opacity: 1;
+transition-delay: 0s;
+}
 /* ---------- Blog listing (card grid, if still used anywhere) ---------- */
 .post-list {
 display: grid;
