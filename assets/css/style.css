@@ -348,7 +348,8 @@ opacity: 1;
 transition-delay: 0.1s;
 }
 
-body.reveal-tips .has-tip::after {
+body.reveal-tips .has-tip:hover::after {
+content: attr(data-url);
 opacity: 1;
 transition-delay: 0s;
 }
