@@ -37,16 +37,6 @@ layout: default
     var customLabel = a.getAttribute('title');
     var label = (customLabel && customLabel.trim()) ? customLabel.trim() : (a.textContent.trim() || href);
 
-    if (customLabel) {
-      a.removeAttribute('title');
-    }
-
-    // Always show the link's full URL in small text right after it.
-    var urlSpan = document.createElement('span');
-    urlSpan.className = 'inline-url';
-    urlSpan.textContent = ' (' + href + ')';
-    a.insertAdjacentElement('afterend', urlSpan);
-
     if (!seen[href]) {
       seen[href] = true;
       links.push({ href: href, label: label });
