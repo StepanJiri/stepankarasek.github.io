@@ -43,9 +43,12 @@ layout: default
     var customLabel = a.getAttribute('title');
     var label = (customLabel && customLabel.trim()) ? customLabel.trim() : (a.textContent.trim() || href);
 
+    a.dataset.url = href;
+
     // Replace the slow native tooltip with a fast custom one.
     if (customLabel) {
       a.removeAttribute('title');
+      a.dataset.label = customLabel.trim();
       addFastTip(a, customLabel.trim());
     }
 
@@ -54,6 +57,37 @@ layout: default
       links.push({ href: href, label: label });
     }
   });
+
+  // Hold Ctrl (or Cmd on Mac) to reveal the full URL above every link in the article.
+  function showFullUrls() {
+    anchors.forEach(function (a) {
+      a.dataset.tip = a.dataset.url;
+      a.classList.add('has-tip');
+    });
+    document.body.classList.add('reveal-tips');
+  }
+
+  function restoreTips() {
+    anchors.forEach(function (a) {
+      if (a.dataset.label) {
+        a.dataset.tip = a.dataset.label;
+      } else {
+        delete a.dataset.tip;
+        a.classList.remove('has-tip');
+      }
+    });
+    document.body.classList.remove('reveal-tips');
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Control' || e.key === 'Meta') showFullUrls();
+  });
+
+  document.addEventListener('keyup', function (e) {
+    if (e.key === 'Control' || e.key === 'Meta') restoreTips();
+  });
+
+  window.addEventListener('blur', restoreTips);
 
   if (links.length === 0) return;
 
