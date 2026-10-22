@@ -252,22 +252,17 @@ margin: 0.75rem 0 1.5rem;
 
 .post-back {
 margin-top: 1.5rem;
+text-align: center;
 }
 
 .post-back a {
-color: var(--fg);
+color: var(--accent);
 text-decoration: none;
 font-size: 0.95rem;
-display: inline-flex;
-align-items: center;
 }
 
 .post-back a:hover {
-color: var(--accent);
-}
-
-.post-back-icon {
-margin-right: 0.35rem;
+text-decoration: underline;
 }
 
 /* ---------- Blog listing (card grid, if still used anywhere) ---------- */
