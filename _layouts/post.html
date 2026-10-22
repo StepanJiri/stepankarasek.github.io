@@ -11,74 +11,11 @@ layout: default
     {{ content }}
   </div>
 
-  <p class="post-back"><a href="{{ '/blog/' | relative_url }}">&larr; Blog Archive</a></p>
-
-  <p class="post-links-reveal" id="post-links-reveal" style="display:none;">
-    <a href="#" id="post-links-reveal-link">Show links</a>
+  <p class="post-back">
+    <a href="{{ '/blog/' | relative_url }}">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="post-back-icon">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>Blog Archive
+    </a>
   </p>
-
-  <div id="post-links" class="post-links" hidden></div>
 </article>
-
-<script>
-(function () {
-  var content = document.getElementById('post-content');
-  var container = document.getElementById('post-links');
-  var revealWrap = document.getElementById('post-links-reveal');
-  var revealLink = document.getElementById('post-links-reveal-link');
-  if (!content || !container || !revealWrap || !revealLink) return;
-
-  var anchors = content.querySelectorAll('a[href^="http"]');
-  var seen = {};
-  var links = [];
-
-  anchors.forEach(function (a) {
-    var href = a.getAttribute('href');
-    var customLabel = a.getAttribute('title');
-    var label = (customLabel && customLabel.trim()) ? customLabel.trim() : (a.textContent.trim() || href);
-
-    if (!seen[href]) {
-      seen[href] = true;
-      links.push({ href: href, label: label });
-    }
-  });
-
-  if (links.length === 0) return;
-
-  revealWrap.style.display = '';
-
-  var heading = document.createElement('p');
-  heading.className = 'post-links-label';
-  heading.textContent = 'Links in this post';
-  container.appendChild(heading);
-
-  var list = document.createElement('ul');
-  list.className = 'post-links-list';
-
-  links.forEach(function (link) {
-    var li = document.createElement('li');
-
-    var a = document.createElement('a');
-    a.href = link.href;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.textContent = link.label;
-    li.appendChild(a);
-
-    var urlLine = document.createElement('span');
-    urlLine.className = 'post-links-url';
-    urlLine.textContent = link.href;
-    li.appendChild(urlLine);
-
-    list.appendChild(li);
-  });
-
-  container.appendChild(list);
-
-  revealLink.addEventListener('click', function (e) {
-    e.preventDefault();
-    container.removeAttribute('hidden');
-    revealWrap.style.display = 'none';
-  });
-})();
-</script>
