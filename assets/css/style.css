@@ -250,19 +250,65 @@ font-size: 0.9rem;
 margin: 0.75rem 0 1.5rem;
 }
 
-.post-back {
-margin-top: 1.5rem;
-text-align: center;
+.post-links-reveal {
+margin-top: 0.4rem;
+margin-bottom: 0;
 }
 
-.post-back a {
-color: var(--accent);
-text-decoration: none;
-font-size: 0.95rem;
-}
-
-.post-back a:hover {
+.post-links-reveal a {
+font-size: 0.85rem;
+color: var(--muted);
 text-decoration: underline;
+}
+
+.post-links-reveal a:hover {
+color: var(--accent);
+}
+
+.post-links {
+margin-top: 1rem;
+padding-top: 1rem;
+border-top: 1px solid var(--border);
+}
+
+.post-links-label {
+font-size: 0.8rem;
+color: var(--muted);
+text-transform: uppercase;
+letter-spacing: 0.03em;
+margin: 0 0 0.6rem 0;
+}
+
+.post-links-list {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: 0.9rem;
+}
+
+.post-links-list li {
+display: flex;
+flex-direction: column;
+gap: 0.1rem;
+}
+
+.post-links-list a {
+font-size: 1.05rem;
+font-weight: 600;
+color: var(--fg);
+text-decoration: none;
+}
+
+.post-links-list a:hover {
+color: var(--accent);
+}
+
+.post-links-url {
+font-size: 0.7rem;
+color: var(--muted);
+word-break: break-all;
 }
 
 /* ---------- Blog listing (card grid, if still used anywhere) ---------- */
