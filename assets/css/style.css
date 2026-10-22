@@ -251,8 +251,10 @@ margin: 0.75rem 0 1.5rem;
 }
 
 .post-links-reveal {
-margin-top: 0.4rem;
+margin-top: 1.5rem;
 margin-bottom: 0;
+padding-top: 1rem;
+border-top: 1px solid var(--border);
 }
 
 .post-links-reveal a {
