@@ -53,17 +53,5 @@
 
   <script data-goatcounter="https://rubicon.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
-
-  <script>
-  (function () {
-    document.querySelectorAll('.post-content a[title]').forEach(function (a) {
-      var tip = a.getAttribute('title');
-      if (!tip || !tip.trim()) return;
-      a.removeAttribute('title');
-      a.dataset.tip = tip.trim();
-      a.classList.add('has-tip');
-    });
-  })();
-  </script>
 </body>
 </html>
