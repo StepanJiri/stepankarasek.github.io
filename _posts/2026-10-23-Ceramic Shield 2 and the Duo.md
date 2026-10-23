@@ -3,6 +3,6 @@ layout: post
 title: "Ceramic Shield 2 and the Duo"
 date: 2026-10-23 17:45:00 +0200
 ---
-The Ceramic Shield 2 that Apple introduced last year on the iPhone 17 improves the iPhone Duo. You can use the iPhone Duo in a laptop style, but in that position the outer screen lies on the desk. Thanks to Ceramic Shield 2, you don't have to worry about scratching the screen.
+The Ceramic Shield 2 that Apple introduced last year on the iPhone 17 improves the iPhone Duo. You can use the iPhone Duo in a laptop style, but in that position the outer screen lies on the desk. Thanks to Ceramic Shield 2, you don't have to worry about scratching the screen, because it vastly improves scratch resistance.
 
 Maybe it was done just to make the iPhone in general better, which it did. Or it was preparation for the iPhone Duo. Or both.
