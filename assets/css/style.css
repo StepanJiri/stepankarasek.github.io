@@ -340,6 +340,24 @@ border-color: var(--accent);
 color: var(--accent);
 }
 
+.start-btn:nth-child(odd) {
+background: #ffffff;
+border-color: var(--accent);
+color: var(--accent);
+}
+
+.start-btn:nth-child(even) {
+background: var(--accent);
+border-color: var(--accent);
+color: #ffffff;
+}
+
+.start-btn:nth-child(odd):hover,
+.start-btn:nth-child(even):hover {
+opacity: 0.85;
+color: inherit;
+}
+
 /* ---------- Blog listing (card grid, if still used anywhere) ---------- */
 .post-list {
 display: grid;
