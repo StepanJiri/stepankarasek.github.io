@@ -1,0 +1,127 @@
+---
+layout: null
+permalink: /start/
+title: Links
+description: Rubicon Revisited — links
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rubicon Revisited — Links</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/x-icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
+<style>
+:root {
+--bg: #ffffff;
+--fg: #111111;
+--muted: #666666;
+--accent: #ff7300;
+--border: #e5e5e5;
+--card-bg: #f7f7f7;
+}
+
+@media (prefers-color-scheme: dark) {
+:root {
+--bg: #000000;
+--fg: #f2f2f2;
+--muted: #999999;
+--accent: #ff9640;
+--border: #222222;
+--card-bg: #151515;
+}
+}
+
+* { box-sizing: border-box; }
+
+body {
+margin: 0;
+background: var(--bg);
+color: var(--fg);
+font-family: Verdana, Geneva, sans-serif;
+line-height: 1.6;
+display: flex;
+justify-content: center;
+}
+
+.start-wrap {
+width: 100%;
+max-width: 420px;
+padding: 3rem 1.5rem 2.5rem;
+text-align: center;
+}
+
+.start-brand {
+font-weight: 700;
+font-size: 1.3rem;
+text-decoration: none;
+color: var(--fg);
+display: block;
+margin-bottom: 0.4rem;
+}
+
+.start-tagline {
+color: var(--muted);
+font-size: 0.9rem;
+margin: 0 0 2rem 0;
+}
+
+.start-links {
+display: flex;
+flex-direction: column;
+gap: 0.85rem;
+}
+
+.start-link {
+display: block;
+padding: 0.95rem 1rem;
+border: 1px solid var(--border);
+border-radius: 10px;
+background: var(--card-bg);
+color: var(--fg);
+text-decoration: none;
+font-weight: 600;
+font-size: 1.05rem;
+transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.start-link:hover,
+.start-link:active {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+.start-footer {
+margin-top: 2.5rem;
+font-size: 0.8rem;
+color: var(--muted);
+}
+
+.start-footer a {
+color: var(--muted);
+}
+
+.start-footer a:hover {
+color: var(--accent);
+}
+</style>
+</head>
+<body>
+<div class="start-wrap">
+  <a class="start-brand" href="{{ '/' | relative_url }}">Rubicon Revisited</a>
+  <p class="start-tagline">By Štěpán Jiří Karásek</p>
+
+  <nav class="start-links">
+    <a class="start-link" href="{{ '/blog/' | relative_url }}">Blog Archive</a>
+    <a class="start-link" href="{{ '/about/' | relative_url }}">About Me</a>
+    <a class="start-link" href="https://mastodon.social/@StepanJiriKarasek" target="_blank" rel="noopener">Mastodon</a>
+    <a class="start-link" href="https://www.youtube.com/@RubiconRevisited" target="_blank" rel="noopener">YouTube</a>
+    <a class="start-link" href="https://rss.com/podcasts/test-pod734/" target="_blank" rel="noopener">Podcast</a>
+    <a class="start-link" href="https://jirka-karasek.itch.io" target="_blank" rel="noopener">Games</a>
+  </nav>
+
+  <p class="start-footer"><a href="{{ '/' | relative_url }}">rubiconrevisited.com</a></p>
+</div>
+</body>
+</html>
