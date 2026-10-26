@@ -4,7 +4,7 @@ title: "YouTube Premium"
 date: 2026-10-24 23:41:00 +0200
 ---
 
-If you have YouTube Premium and are offline with a downloaded video, you can't like the video. You can't open the full description, so if you watch a [concert](https://youtu.be/KDMX2eE7xG8?is=ErKZtmFHFaulhPiC), you can't see the timestamps. You can't get the URL for the video. You can't download specific videos at different resolutions. 
+If you have YouTube Premium and are offline with a downloaded video, you can't like the video. You can't open the full description, so if you watch a [concert](https://youtu.be/KDMX2eE7xG8?is=ErKZtmFHFaulhPiC ”Live in Los Angeles 10-6-26 - Jesse Welles”), you can't see the timestamps. You can't get the URL for the video. You can't download specific videos at different resolutions. 
 
 The UI is all over the place. The download indicator is on the same line as the name of the channel. Why? YouTube's automatic downloads even grab Shorts.
 
