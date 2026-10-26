@@ -56,17 +56,7 @@ text-decoration: none;
 color: var(--fg);
 margin-bottom: 2rem;
 line-height: 1.3;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 0.6rem;
-}
-
-.site-favicon {
-width: 24px;
-height: 24px;
-border-radius: 6px;
-flex-shrink: 0;
+display: block;
 }
 
 .site-brand.active {
@@ -521,13 +511,9 @@ padding: 1.25rem 1.25rem 1rem;
 }
 
 .site-brand {
-justify-content: center;
+text-align: center;
 font-size: 1.6rem;
 margin-bottom: 1rem;
-}
-
-.site-favicon {
-display: none;
 }
 
 .sidebar-nav {
