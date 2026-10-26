@@ -1,8 +1,8 @@
 ---
 layout: default
-title: About
+title: About Web
 permalink: /aboutweb/
-hide_rss: true
+hide_rss: False
 ---
 
 #### Privacy Report 
