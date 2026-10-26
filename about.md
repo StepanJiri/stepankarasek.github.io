@@ -31,3 +31,4 @@ Photo by Daniel Darby Supik / (2026-05-16)
 Photo by Daniel Darby Supik / (2026-02-17) BTW Daniel is not my personal photographer.
 {: .caption}
 
+[About this web.](https://rubiconrevisited.com/aboutweb/) 
