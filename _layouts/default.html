@@ -39,7 +39,7 @@
 
       <nav class="sidebar-nav">
         <a href="{{ '/blog/' | relative_url }}"
-           class="nav-link {% if page.url contains '/blog' or page.layout == 'post' %}active{% endif %}">Blog Archive</a>
+           class="nav-link {% if page.url == '/blog/' %}active{% endif %}">Blog Archive</a>
 
         <a href="{{ '/about/' | relative_url }}"
            class="nav-link {% if page.url == '/about/' %}active{% endif %}">About Me</a>
