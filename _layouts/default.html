@@ -35,7 +35,10 @@
 <body>
   <div class="page-wrap">
     <aside class="sidebar">
-      <a class="site-brand {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <a class="site-brand {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">
+        <span>{{ site.title }}</span>
+        <img class="site-favicon" src="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}" alt="">
+      </a>
 
       <nav class="sidebar-nav">
         <a href="{{ '/blog/' | relative_url }}"
