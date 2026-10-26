@@ -31,7 +31,7 @@ color: var(--fg);
 line-height: 1.6;
 }
 
-a { color: var(--accent); }
+a { color: var(--accent); text-decoration: none; }
 
 /* ---------- Layout: sidebar + content ---------- */
 .page-wrap {
@@ -521,17 +521,24 @@ padding: 1.25rem 1.25rem 1rem;
 }
 
 .site-brand {
-margin-bottom: 0.75rem;
+justify-content: center;
+font-size: 1.6rem;
+margin-bottom: 1rem;
 }
 
 .sidebar-nav {
 flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
 gap: 1.25rem;
+row-gap: 0.6rem;
 }
 
-.sidebar-divider,
-.nav-caps {
-display: none;
+.sidebar-divider {
+flex-basis: 100%;
+height: 0;
+border: none;
+margin: 0;
 }
 
 main {
