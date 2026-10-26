@@ -513,7 +513,7 @@ padding: 1.25rem 1.25rem 1rem;
 .site-brand {
 text-align: center;
 font-size: 1.6rem;
-margin-bottom: 1rem;
+margin-bottom: 0.4rem;
 }
 
 .sidebar-nav {
@@ -532,7 +532,18 @@ margin: 0;
 }
 
 .nav-caps:first-of-type {
-margin-top: 0.15rem;
+margin-top: 0.5rem;
+}
+
+.nav-caps:not(:last-of-type)::after {
+content: "•";
+display: inline-block;
+margin-left: 0.75rem;
+color: var(--muted);
+}
+
+.nav-caps:hover::after {
+color: var(--muted);
 }
 
 main {
