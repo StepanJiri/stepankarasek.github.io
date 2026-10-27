@@ -560,14 +560,14 @@ padding: 1.25rem 1.25rem 1rem;
 .site-brand {
 text-align: center;
 font-size: 1.6rem;
-margin-bottom: 0.4rem;
+margin-bottom: 0;
 }
 
 .sidebar-nav {
 flex-direction: row;
 flex-wrap: wrap;
 justify-content: center;
-column-gap: 0.75rem;
+column-gap: 0.5rem;
 row-gap: 0;
 }
 
@@ -582,15 +582,9 @@ margin: 0;
 margin-top: 0.5rem;
 }
 
-.nav-caps:not(:last-of-type)::after {
-content: "•";
-display: inline-block;
-margin-left: 0.75rem;
-color: var(--muted);
-}
-
-.nav-caps:hover::after {
-color: var(--muted);
+.nav-caps {
+font-size: 0.78rem;
+letter-spacing: 0.01em;
 }
 
 main {
