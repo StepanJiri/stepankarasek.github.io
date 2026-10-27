@@ -1,0 +1,20 @@
+# Filming Map data file
+#
+# Add one entry per place you recorded a video. For each entry you only need:
+#   lat / lng   — the spot's coordinates
+#   youtube     — the full YouTube video URL
+#
+# The video's title, channel name, and thumbnail are fetched automatically
+# from YouTube when someone taps the pin — you never need to type them here.
+#
+# How to get coordinates:
+#   - Google Maps: right-click the spot -> the lat, lng numbers appear at the
+#     top of the menu -> click to copy them.
+#   - Apple Maps: drop a pin, tap it, scroll down to see the coordinates.
+#   - openstreetmap.org: right-click the spot -> "Show address" -> coordinates
+#     appear in the sidebar.
+#
+# Example entry (replace with your own, you can add as many as you like):
+- lat: 49.8381
+  lng: 18.2822
+  youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
