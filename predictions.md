@@ -25,7 +25,7 @@ Keep the blank lines around the text, and keep markdown="1" on the inner div.
   <div class="prediction-head">
     <div class="prediction-titles">
       <h2>Next MacBook Air redesign includes touchscreen</h2>
-      <p class="prediction-sub"></p>
+      <p class="prediction-sub">this is a test</p>
     </div>
   </div>
   <div class="prediction-body" markdown="1">
