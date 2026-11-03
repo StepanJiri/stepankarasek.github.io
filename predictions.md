@@ -30,7 +30,6 @@ Keep the blank lines around the text, and keep markdown="1" on the inner div.
   </div>
   <div class="prediction-body" markdown="1">
 
-Write your prediction here. This is **normal markdown**, so you can use [links](https://rubiconrevisited.com), lists and more.
 
   </div>
 </div>
