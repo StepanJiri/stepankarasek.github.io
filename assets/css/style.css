@@ -422,27 +422,26 @@ color: var(--muted);
 
 .prediction-side {
 flex: none;
-max-width: 50%;
+max-width: 55%;
 display: flex;
-flex-direction: column;
-align-items: flex-end;
-gap: 0.35rem;
+flex-wrap: wrap;
+justify-content: flex-end;
+align-items: baseline;
+margin-top: 0.3rem;
+font-size: 0.85rem;
+color: var(--muted);
 text-align: right;
 }
 
+.prediction-date,
 .prediction-countdown {
-font-size: 0.8rem;
+font-size: 0.85rem;
 color: var(--muted);
 }
 
-.prediction-date {
-flex: none;
-white-space: nowrap;
-font-size: 0.85rem;
-color: var(--muted);
-border: 1px solid var(--border);
-border-radius: 6px;
-padding: 0.25rem 0.6rem;
+.prediction-date + .prediction-countdown::before {
+content: "\00b7";
+margin: 0 0.4rem;
 }
 
 /* ---------- Blog listing (card grid, if still used anywhere) ---------- */
