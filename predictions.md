@@ -13,8 +13,8 @@ hide_rss: true
 HOW TO ADD A PREDICTION: copy one whole <div class="prediction"> ... </div> block below,
 paste it above or below the others, then change:
   - data-date="YYYY-MM-DD" on the first line: the day you want to check it.
-    This turns on the countdown and the "Add to calendar" button.
-    Delete data-date if you want neither.
+    This turns on the countdown, shown in days.
+    Delete data-date if you don't want a countdown.
   - the title (inside <h2>)
   - the small text (inside <p class="prediction-sub">)
   - the box on the right (inside <span class="prediction-date">). Any text works,
@@ -59,62 +59,14 @@ Another prediction goes here.
 
 <script>
 (function () {
-  function pad(n) { return (n < 10 ? '0' : '') + n; }
-
-  function countdown(target) {
+  function daysLeft(target) {
     var now = new Date();
     var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    if (target.getTime() === today.getTime()) return 'Check it today';
-    if (target < today) return 'Time to check it';
-    var y = target.getFullYear() - today.getFullYear();
-    var m = target.getMonth() - today.getMonth();
-    var d = target.getDate() - today.getDate();
-    if (d < 0) {
-      m--;
-      d += new Date(target.getFullYear(), target.getMonth(), 0).getDate();
-    }
-    if (m < 0) { y--; m += 12; }
-    var parts = [];
-    if (y > 0) parts.push(y + (y === 1 ? ' year' : ' years'));
-    if (m > 0) parts.push(m + (m === 1 ? ' month' : ' months'));
-    if (y === 0 && d > 0) parts.push(d + (d === 1 ? ' day' : ' days'));
-    return parts.slice(0, 2).join(', ') + ' left';
-  }
-
-  function icsText(s) {
-    return String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
-  }
-
-  function icsDate(dt) {
-    return dt.getFullYear() + pad(dt.getMonth() + 1) + pad(dt.getDate());
-  }
-
-  function calendarHref(title, target) {
-    var next = new Date(target.getFullYear(), target.getMonth(), target.getDate() + 1);
-    var now = new Date();
-    var stamp = now.getUTCFullYear() + pad(now.getUTCMonth() + 1) + pad(now.getUTCDate()) + 'T' +
-      pad(now.getUTCHours()) + pad(now.getUTCMinutes()) + pad(now.getUTCSeconds()) + 'Z';
-    var lines = [
-      'BEGIN:VCALENDAR',
-      'VERSION:2.0',
-      'PRODID:-//Rubicon Revisited//Predictions//EN',
-      'BEGIN:VEVENT',
-      'UID:' + icsDate(target) + '-' + Math.abs(hash(title)) + '@rubiconrevisited.com',
-      'DTSTAMP:' + stamp,
-      'DTSTART;VALUE=DATE:' + icsDate(target),
-      'DTEND;VALUE=DATE:' + icsDate(next),
-      'SUMMARY:' + icsText('Check my prediction: ' + title),
-      'DESCRIPTION:' + icsText('https://rubiconrevisited.com/predictions/'),
-      'END:VEVENT',
-      'END:VCALENDAR'
-    ];
-    return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(lines.join('\r\n'));
-  }
-
-  function hash(s) {
-    var h = 0;
-    for (var i = 0; i < s.length; i++) { h = ((h << 5) - h + s.charCodeAt(i)) | 0; }
-    return h;
+    var days = Math.round((target - today) / 86400000);
+    if (days > 1) return days + ' days left';
+    if (days === 1) return '1 day left';
+    if (days === 0) return 'Check it today';
+    return 'Time to check it';
   }
 
   document.querySelectorAll('.prediction[data-date]').forEach(function (el) {
@@ -132,20 +84,10 @@ Another prediction goes here.
       head.appendChild(side);
     }
 
-    var title = (el.querySelector('h2') || {}).textContent || 'Prediction';
-    title = title.trim();
-
     var count = document.createElement('span');
     count.className = 'prediction-countdown';
-    count.textContent = countdown(target);
+    count.textContent = daysLeft(target);
     side.appendChild(count);
-
-    var cal = document.createElement('a');
-    cal.className = 'prediction-cal';
-    cal.href = calendarHref(title, target);
-    cal.download = 'prediction-' + icsDate(target) + '.ics';
-    cal.textContent = 'Add to calendar';
-    side.appendChild(cal);
   });
 })();
 </script>
