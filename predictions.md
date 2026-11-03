@@ -13,12 +13,10 @@ hide_rss: true
 HOW TO ADD A PREDICTION: copy one whole <div class="prediction"> ... </div> block below,
 paste it above or below the others, then change:
   - data-date="YYYY-MM-DD" on the first line: the day you want to check it.
-    This turns on the countdown, shown in days.
-    Delete data-date if you don't want a countdown.
+    The page shows that date and a countdown in days under the title, automatically.
+    Delete data-date if you don't want them.
   - the title (inside <h2>)
   - the small text (inside <p class="prediction-sub">)
-  - the box on the right (inside <span class="prediction-date">). Any text works,
-    or delete the whole <span> if you don't want a box.
   - the text under it. Write it as normal markdown (bold, links, lists all work).
 Keep the blank lines around the text, and keep markdown="1" on the inner div.
 -->
@@ -28,9 +26,6 @@ Keep the blank lines around the text, and keep markdown="1" on the inner div.
     <div class="prediction-titles">
       <h2>Next MacBook Air redesign includes touchscreen</h2>
       <p class="prediction-sub"></p>
-    </div>
-    <div class="prediction-side">
-      <span class="prediction-date">3 Nov 2026</span>
     </div>
   </div>
   <div class="prediction-body" markdown="1">
@@ -45,9 +40,6 @@ Write your prediction here. This is **normal markdown**, so you can use [links](
     <div class="prediction-titles">
       <h2>Second example title</h2>
       <p class="prediction-sub">Another small line</p>
-    </div>
-    <div class="prediction-side">
-      <span class="prediction-date">3 Nov 2026</span>
     </div>
   </div>
   <div class="prediction-body" markdown="1">
@@ -82,6 +74,13 @@ Another prediction goes here.
       side = document.createElement('div');
       side.className = 'prediction-side';
       head.appendChild(side);
+    }
+
+    if (!side.querySelector('.prediction-date')) {
+      var when = document.createElement('span');
+      when.className = 'prediction-date';
+      when.textContent = target.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+      side.appendChild(when);
     }
 
     var count = document.createElement('span');
