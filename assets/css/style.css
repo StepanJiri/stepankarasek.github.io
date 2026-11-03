@@ -435,10 +435,6 @@ font-size: 0.8rem;
 color: var(--muted);
 }
 
-.prediction-cal {
-font-size: 0.8rem;
-}
-
 .prediction-date {
 flex: none;
 white-space: nowrap;
