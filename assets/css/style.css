@@ -420,6 +420,25 @@ font-size: 0.85rem;
 color: var(--muted);
 }
 
+.prediction-side {
+flex: none;
+max-width: 50%;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+gap: 0.35rem;
+text-align: right;
+}
+
+.prediction-countdown {
+font-size: 0.8rem;
+color: var(--muted);
+}
+
+.prediction-cal {
+font-size: 0.8rem;
+}
+
 .prediction-date {
 flex: none;
 white-space: nowrap;
