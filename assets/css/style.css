@@ -393,6 +393,43 @@ font-weight: 600;
 font-size: 0.9rem;
 }
 
+/* ---------- Predictions page ---------- */
+.prediction {
+margin: 2rem 0 2.5rem;
+}
+
+.prediction-head {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 1rem;
+padding-bottom: 0.75rem;
+border-bottom: 1px solid var(--border);
+margin-bottom: 1rem;
+}
+
+.prediction-titles h2 {
+margin: 0;
+font-size: 1.4rem;
+line-height: 1.25;
+}
+
+.prediction-sub {
+margin: 0.2rem 0 0 0;
+font-size: 0.85rem;
+color: var(--muted);
+}
+
+.prediction-date {
+flex: none;
+white-space: nowrap;
+font-size: 0.85rem;
+color: var(--muted);
+border: 1px solid var(--border);
+border-radius: 6px;
+padding: 0.25rem 0.6rem;
+}
+
 /* ---------- Blog listing (card grid, if still used anywhere) ---------- */
 .post-list {
 display: grid;
