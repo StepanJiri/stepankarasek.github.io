@@ -22,8 +22,8 @@ Keep the blank lines around the text, and keep markdown="1" on the inner div.
 <div class="prediction">
   <div class="prediction-head">
     <div class="prediction-titles">
-      <h2>Example prediction title</h2>
-      <p class="prediction-sub">Small text under the title</p>
+      <h2>Next MacBook Air redesign includes touchscreen</h2>
+      <p class="prediction-sub"></p>
     </div>
     <span class="prediction-date">3 Nov 2026</span>
   </div>
