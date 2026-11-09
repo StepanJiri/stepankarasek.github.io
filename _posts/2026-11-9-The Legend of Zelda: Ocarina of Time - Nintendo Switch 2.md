@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Legend of Zelda: Ocarina of Time - Nintendo Switch 2"
+title: "The Legend of Zelda: Ocarina of Time - Nintendo Switch 2 edition"
 date: 2026-11-09 9:37:00 +0200
 ---
 I am not excited about the *Ocarina of Time* remake at all. Don't get me wrong, I love Zelda games.
