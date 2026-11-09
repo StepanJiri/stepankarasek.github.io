@@ -182,7 +182,8 @@ font-size: 0.9rem;
 margin-bottom: 0.5rem;
 }
 
-.post-divider {
+.post-divider,
+main hr {
 border: none;
 border-top: 1px solid var(--border);
 margin: 1.75rem 0;
