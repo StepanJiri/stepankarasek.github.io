@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "The Legend of Zelda: Ocarina of Time - Nintendo Switch 2"
