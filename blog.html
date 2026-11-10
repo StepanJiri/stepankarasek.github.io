@@ -4,12 +4,79 @@ title: Blog Archive
 permalink: /blog/
 ---
 
-<h1>Blog Archive</h1>
+<div class="archive-head">
+  <h1>Blog Archive</h1>
+  <form id="archive-search" class="archive-search" role="search">
+    <input type="search" id="archive-search-input" class="search-input" placeholder="Search" enterkeyhint="search" autocomplete="off" aria-label="Search the blog">
+  </form>
+</div>
+
+<p id="archive-empty" class="search-empty" hidden>Nothing found.</p>
 
 <ul class="archive-list">
   {% for post in site.posts %}
-  <li class="archive-item">
+  <li class="archive-item" data-url="{{ post.url | relative_url }}">
     <a href="{{ post.url | relative_url }}" class="archive-title">{{ post.title }}</a>
     <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>  </li>
   {% endfor %}
 </ul>
+
+<script>
+(function () {
+  var form = document.getElementById('archive-search');
+  var input = document.getElementById('archive-search-input');
+  var empty = document.getElementById('archive-empty');
+  var items = document.querySelectorAll('.archive-item');
+  var index = null;
+  var failed = false;
+
+  function plain(s) {
+    return String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  }
+
+  function showAll() {
+    items.forEach(function (li) { li.style.display = ''; });
+    empty.hidden = true;
+  }
+
+  function run() {
+    var words = plain(input.value).split(/\s+/).filter(function (w) { return w.length > 0; });
+    if (words.length === 0) { showAll(); return; }
+
+    if (!index) {
+      empty.textContent = failed ? 'Search could not load.' : 'Search is still loading, press Enter again.';
+      empty.hidden = false;
+      return;
+    }
+    empty.textContent = 'Nothing found.';
+
+    var shown = 0;
+    items.forEach(function (li) {
+      var post = index[li.getAttribute('data-url')];
+      var text = post ? plain(post.title + ' ' + post.content) : plain(li.textContent);
+      var ok = words.every(function (w) { return text.indexOf(w) !== -1; });
+      li.style.display = ok ? '' : 'none';
+      if (ok) shown++;
+    });
+    empty.hidden = shown !== 0;
+  }
+
+  fetch('{{ "/search.json" | relative_url }}')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      index = {};
+      data.forEach(function (p) { index[p.url] = p; });
+    })
+    .catch(function () { failed = true; });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    run();
+    input.blur();
+  });
+
+  input.addEventListener('input', function () {
+    if (input.value.trim() === '') showAll();
+  });
+})();
+</script>
