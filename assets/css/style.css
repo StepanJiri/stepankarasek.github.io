@@ -548,6 +548,49 @@ font-size: 1.05rem;
 color: var(--accent);
 }
 
+/* ---------- Blog archive search ---------- */
+.archive-head {
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 0.5rem 1rem;
+}
+
+.archive-search {
+margin: 0;
+}
+
+.search-input {
+display: block;
+width: 14rem;
+max-width: 100%;
+padding: 0.5rem 0.8rem;
+font: inherit;
+font-size: 0.95rem;
+color: var(--fg);
+background: var(--card-bg);
+border: 1px solid var(--border);
+border-radius: 8px;
+}
+
+.search-input:focus {
+outline: none;
+border-color: var(--accent);
+}
+
+.search-empty {
+color: var(--muted);
+margin-top: 1.5rem;
+}
+
+@media (max-width: 640px) {
+.archive-search,
+.search-input {
+width: 100%;
+}
+}
+
 /* ---------- Archive list on homepage ---------- */
 .archive-posts {
 margin-top: 2rem;
