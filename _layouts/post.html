@@ -1,11 +1,43 @@
+
 ---
 layout: default
 ---
 <article class="post">
+
   <header class="post-header">
     <h1>{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: '%B %-d, %Y' }}</p>
   </header>
+
+  <!-- Article structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": {{ page.url | absolute_url | append: "#article" | jsonify }},
+    "headline": {{ page.title | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+    "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+    "author": {
+      "@type": "Person",
+      "@id": "https://rubiconrevisited.com/#stepan",
+      "name": "Štěpán Jiří Karásek",
+      "url": "https://rubiconrevisited.com/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://rubiconrevisited.com/#organization",
+      "name": "Rubicon Revisited",
+      "url": "https://rubiconrevisited.com/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ page.url | absolute_url | jsonify }}
+    },
+    "inLanguage": "en"
+  }
+  </script>
 
   <div class="post-content" id="post-content">
     {{ content }}
@@ -16,6 +48,7 @@ layout: default
   </p>
 
   <div id="post-links" class="post-links" hidden></div>
+
 </article>
 
 <script>
