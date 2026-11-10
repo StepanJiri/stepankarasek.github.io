@@ -40,50 +40,63 @@ permalink: /blog/
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
-  function snippet(content, words) {
+  var MAX_LINES = 5;
+
+  function lines(content, words) {
     var text = String(content).normalize('NFC');
     var flat = plain(text);
-    var first = -1;
-    words.forEach(function (w) {
-      var i = flat.indexOf(w);
-      if (i !== -1 && (first === -1 || i < first)) first = i;
-    });
-    if (first === -1) return '';
-    var start = Math.max(0, first - 30);
-    var end = Math.min(text.length, first + 160);
     var hits = [];
     words.forEach(function (w) {
-      var i = flat.indexOf(w, start);
-      while (i !== -1 && i < end) {
+      var i = flat.indexOf(w);
+      while (i !== -1) {
         hits.push([i, i + w.length]);
         i = flat.indexOf(w, i + w.length);
       }
     });
     hits.sort(function (a, b) { return a[0] - b[0]; });
-    var html = '';
-    var pos = start;
+
+    var wins = [];
+    var covered = -1;
     hits.forEach(function (h) {
-      if (h[0] < pos) return;
-      html += esc(text.slice(pos, h[0])) + '<mark>' + esc(text.slice(h[0], Math.min(h[1], end))) + '</mark>';
-      pos = Math.min(h[1], end);
+      if (h[0] < covered) return;
+      var start = Math.max(0, h[0] - 30);
+      var end = Math.min(text.length, h[0] + 160);
+      wins.push([start, end]);
+      covered = end;
     });
-    html += esc(text.slice(pos, end));
-    return (start > 0 ? '\u2026' : '') + html + (end < text.length ? '\u2026' : '');
+
+    var html = wins.slice(0, MAX_LINES).map(function (win) {
+      var start = win[0], end = win[1];
+      var out = '';
+      var pos = start;
+      hits.forEach(function (h) {
+        if (h[0] < pos || h[0] >= end) return;
+        var stop = Math.min(h[1], end);
+        out += esc(text.slice(pos, h[0])) + '<mark>' + esc(text.slice(h[0], stop)) + '</mark>';
+        pos = stop;
+      });
+      out += esc(text.slice(pos, end));
+      return (start > 0 ? '\u2026' : '') + out + (end < text.length ? '\u2026' : '');
+    });
+
+    var more = wins.length - html.length;
+    if (more > 0) html.push('+ ' + more + ' more');
+    return html;
   }
 
-  function setSnippet(li, html) {
-    var el = li.querySelector('.archive-preview');
-    if (!html) { if (el) el.remove(); return; }
-    if (!el) {
-      el = document.createElement('span');
+  function setSnippet(li, list) {
+    var main = li.querySelector('.archive-main');
+    main.querySelectorAll('.archive-preview').forEach(function (el) { el.remove(); });
+    (list || []).forEach(function (html) {
+      var el = document.createElement('span');
       el.className = 'archive-preview';
-      li.querySelector('.archive-main').appendChild(el);
-    }
-    el.innerHTML = html;
+      el.innerHTML = html;
+      main.appendChild(el);
+    });
   }
 
   function showAll() {
-    items.forEach(function (li) { li.style.display = ''; setSnippet(li, ''); });
+    items.forEach(function (li) { li.style.display = ''; setSnippet(li, null); });
     empty.hidden = true;
   }
 
@@ -104,7 +117,7 @@ permalink: /blog/
       var text = post ? plain(post.title + ' ' + post.content) : plain(li.textContent);
       var ok = words.every(function (w) { return text.indexOf(w) !== -1; });
       li.style.display = ok ? '' : 'none';
-      setSnippet(li, ok && post ? snippet(post.content, words) : '');
+      setSnippet(li, ok && post ? lines(post.content, words) : null);
       if (ok) shown++;
     });
     empty.hidden = shown !== 0;
