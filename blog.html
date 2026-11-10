@@ -18,7 +18,6 @@ permalink: /blog/
   <li class="archive-item" data-url="{{ post.url | relative_url }}">
     <div class="archive-main">
       <a href="{{ post.url | relative_url }}" class="archive-title">{{ post.title }}</a>
-      <span class="archive-preview">{{ post.content | strip_html | strip_newlines | normalize_whitespace | truncatewords: 24 }}</span>
     </div>
     <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>  </li>
   {% endfor %}
@@ -37,8 +36,54 @@ permalink: /blog/
     return String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   }
 
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function snippet(content, words) {
+    var text = String(content).normalize('NFC');
+    var flat = plain(text);
+    var first = -1;
+    words.forEach(function (w) {
+      var i = flat.indexOf(w);
+      if (i !== -1 && (first === -1 || i < first)) first = i;
+    });
+    if (first === -1) return '';
+    var start = Math.max(0, first - 30);
+    var end = Math.min(text.length, first + 160);
+    var hits = [];
+    words.forEach(function (w) {
+      var i = flat.indexOf(w, start);
+      while (i !== -1 && i < end) {
+        hits.push([i, i + w.length]);
+        i = flat.indexOf(w, i + w.length);
+      }
+    });
+    hits.sort(function (a, b) { return a[0] - b[0]; });
+    var html = '';
+    var pos = start;
+    hits.forEach(function (h) {
+      if (h[0] < pos) return;
+      html += esc(text.slice(pos, h[0])) + '<mark>' + esc(text.slice(h[0], Math.min(h[1], end))) + '</mark>';
+      pos = Math.min(h[1], end);
+    });
+    html += esc(text.slice(pos, end));
+    return (start > 0 ? '\u2026' : '') + html + (end < text.length ? '\u2026' : '');
+  }
+
+  function setSnippet(li, html) {
+    var el = li.querySelector('.archive-preview');
+    if (!html) { if (el) el.remove(); return; }
+    if (!el) {
+      el = document.createElement('span');
+      el.className = 'archive-preview';
+      li.querySelector('.archive-main').appendChild(el);
+    }
+    el.innerHTML = html;
+  }
+
   function showAll() {
-    items.forEach(function (li) { li.style.display = ''; });
+    items.forEach(function (li) { li.style.display = ''; setSnippet(li, ''); });
     empty.hidden = true;
   }
 
@@ -59,6 +104,7 @@ permalink: /blog/
       var text = post ? plain(post.title + ' ' + post.content) : plain(li.textContent);
       var ok = words.every(function (w) { return text.indexOf(w) !== -1; });
       li.style.display = ok ? '' : 'none';
+      setSnippet(li, ok && post ? snippet(post.content, words) : '');
       if (ok) shown++;
     });
     empty.hidden = shown !== 0;
