@@ -40,7 +40,7 @@ permalink: /blog/
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
-  var MAX_LINES = 5;
+  var MAX_LINES = 10000;
 
   function lines(content, words) {
     var text = String(content).normalize('NFC');
@@ -58,7 +58,6 @@ permalink: /blog/
     var wins = [];
     var covered = -1;
     hits.forEach(function (h) {
-      if (h[0] < covered) return;
       var start = Math.max(0, h[0] - 30);
       var end = Math.min(text.length, h[0] + 160);
       wins.push([start, end]);
