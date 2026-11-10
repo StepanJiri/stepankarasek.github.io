@@ -5,6 +5,7 @@ permalink: /about/
 hide_rss: false
 ---
 # About Me
+Štěpán Jiří Karásek 
 
 Hi, welcome to my page. Here I write about what I find interesting. 
 
