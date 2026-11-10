@@ -13,6 +13,42 @@
   <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
 
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://rubiconrevisited.com/#stepan",
+      "name": "Štěpán Jiří Karásek",
+      "url": "https://rubiconrevisited.com/about/",
+      "mainEntityOfPage": "https://rubiconrevisited.com/about/",
+      "image": "https://rubiconrevisited.com/assets/favicon/android-chrome-512x512.png",
+      "sameAs": [
+        "https://mastodon.social/@StepanJiriKarasek",
+        "https://jirka-karasek.itch.io/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rubiconrevisited.com/#website",
+      "url": "https://rubiconrevisited.com/",
+      "name": "Rubicon Revisited",
+      "description": "By Štěpán Jiří Karásek",
+      "publisher": {
+        "@id": "https://rubiconrevisited.com/#stepan"
+      },
+      "creator": {
+        "@id": "https://rubiconrevisited.com/#stepan"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+
+
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
   <meta property="og:description" content="{{ page.description | default: site.description }}">
