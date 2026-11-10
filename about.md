@@ -5,9 +5,8 @@ permalink: /about/
 hide_rss: false
 ---
 # About Me
-Štěpán Jiří Karásek 
 
-Hi, welcome to my page. Here I write about what I find interesting. 
+Hi, I'm Štěpán Jiří Karásek. Welcome to my page. Here I write about what I find interesting. 
 
 You can find me on [Mastodon](https://mastodon.social/@StepanJiriKarasek), [Youtube](https://www.youtube.com/channel/UCNr3EHRzIhJ2l8KLF9SlgFw), [itch.io](https://jirka-karasek.itch.io/) and [podcast](https://rubiconrevisited.com/podcast/).
 
