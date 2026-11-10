@@ -28,6 +28,7 @@ My two big project Rubicon and Shift are made with care for game design.
 [**Rubicon**](https://jirka-karasek.itch.io/rubicon) is my biggest game to this point. It is a metroidvania game. Every single upgrade changes and influences the other. It is a first-person shooter. With Rubicon, I won first position at CTRL + GAME Ostrava 2025.
 
 ## Photos
-This is short. few times I was taking photos for **Koprcup**. Photos, [1](https://www.instagram.com/p/DKKWtChMmYL/?img_index=1), [2](https://www.instagram.com/p/DIbgQqziCew/), [3](https://www.instagram.com/p/DIs5AijMGUr/?img_index=1). 
+This is short. A few times I was taking photos for **Koprcup**. Photos, [1](https://www.instagram.com/p/DKKWtChMmYL/?img_index=1), [2](https://www.instagram.com/p/DIbgQqziCew/), [3](https://www.instagram.com/p/DIs5AijMGUr/?img_index=1). 
+
 
 
