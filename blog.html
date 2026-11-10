@@ -16,7 +16,10 @@ permalink: /blog/
 <ul class="archive-list">
   {% for post in site.posts %}
   <li class="archive-item" data-url="{{ post.url | relative_url }}">
-    <a href="{{ post.url | relative_url }}" class="archive-title">{{ post.title }}</a>
+    <div class="archive-main">
+      <a href="{{ post.url | relative_url }}" class="archive-title">{{ post.title }}</a>
+      <span class="archive-preview">{{ post.content | strip_html | strip_newlines | normalize_whitespace | truncatewords: 24 }}</span>
+    </div>
     <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>  </li>
   {% endfor %}
 </ul>
