@@ -545,6 +545,7 @@ font-size: 1.05rem;
 }
 
 .archive-main {
+flex: 1 1 auto;
 min-width: 0;
 }
 
@@ -555,6 +556,15 @@ font-size: 0.85rem;
 font-weight: 400;
 line-height: 1.5;
 color: var(--muted);
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.archive-preview mark {
+background: none;
+color: var(--accent);
+font-weight: 700;
 }
 
 .archive-title:hover {
