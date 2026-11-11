@@ -9,9 +9,8 @@ permalink: /blog/
   <form id="archive-search" class="archive-search" role="search">
     <input type="search" id="archive-search-input" class="search-input" placeholder="Search" enterkeyhint="search" autocomplete="off" aria-label="Search the blog">
   </form>
+  <p id="archive-count" class="archive-count" hidden></p>
 </div>
-
-<p id="archive-count" class="archive-count" hidden></p>
 
 <ul class="archive-list">
   {% for post in site.posts %}
