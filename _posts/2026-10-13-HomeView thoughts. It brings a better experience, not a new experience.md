@@ -8,8 +8,7 @@ First, I like the name. It is for a home, it has a display, and it sees. So I am
 
 It should have Face ID. Relying on camera recognition and nearby devices is not cool. But maybe the LiDAR sensor doesn't have a long enough range. And the price may be a reason too.
 
-In this three-minute [video](https://youtu.be/hkrYiZ_g9tw?si=p4rOrqzkphsJWLou "Welcome Apple HomeView:
-Designed for life at home. Youtube Video") by Apple, there is not a single thing done on HomeView that couldn't be done on an iPhone or even an Apple Watch. Yes, it has a bigger display, so more people can look at it than at the small Apple Watch, and especially the camera view. So it brings a better experience, not a new experience.
+In this three-minute [video](https://youtu.be/hkrYiZ_g9tw?si=p4rOrqzkphsJWLou "Welcome Apple HomeView: Designed for life at home. YouTube Video") by Apple, there is not a single thing done on HomeView that couldn't be done on an iPhone or even an Apple Watch. Yes, it has a bigger display, so more people can look at it than at the small Apple Watch, and especially the camera view. So it brings a better experience, not a new experience.
 
 In the same video I did not see a single Apple Watch, iPhone, iPad, Mac, etc. I wonder why. Okay, an AirTag was there.
 
