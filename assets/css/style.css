@@ -572,6 +572,19 @@ overflow: hidden;
 text-overflow: ellipsis;
 }
 
+.archive-title mark {
+  background: none;
+  color: var(--accent);
+  font-weight: inherit;
+}
+
+.archive-preview code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.95em;
+  background: none;
+  padding: 0;
+}
+
 .archive-preview mark {
 background: none;
 color: var(--accent);
