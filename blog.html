@@ -11,6 +11,8 @@ permalink: /blog/
   </form>
 </div>
 
+<p id="archive-count" class="archive-count" hidden></p>
+
 <p id="archive-empty" class="search-empty" hidden>Nothing found.</p>
 
 <ul class="archive-list">
@@ -28,6 +30,7 @@ permalink: /blog/
   var form = document.getElementById('archive-search');
   var input = document.getElementById('archive-search-input');
   var empty = document.getElementById('archive-empty');
+  var count = document.getElementById('archive-count');
   var items = document.querySelectorAll('.archive-item');
   var index = null;
   var failed = false;
@@ -38,6 +41,19 @@ permalink: /blog/
 
   function esc(s) {
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function countIn(str, words) {
+    var flat = plain(String(str).normalize('NFC'));
+    var n = 0;
+    words.forEach(function (w) {
+      var i = flat.indexOf(w);
+      while (i !== -1) {
+        n++;
+        i = flat.indexOf(w, i + w.length);
+      }
+    });
+    return n;
   }
 
   var MAX_LINES = 10000;
@@ -97,6 +113,7 @@ permalink: /blog/
   function showAll() {
     items.forEach(function (li) { li.style.display = ''; setSnippet(li, null); });
     empty.hidden = true;
+    count.hidden = true;
   }
 
   function run() {
@@ -106,20 +123,27 @@ permalink: /blog/
     if (!index) {
       empty.textContent = failed ? 'Search could not load.' : 'Search is still loading, press Enter again.';
       empty.hidden = false;
+      count.hidden = true;
       return;
     }
     empty.textContent = 'Nothing found.';
 
     var shown = 0;
+    var total = 0;
     items.forEach(function (li) {
       var post = index[li.getAttribute('data-url')];
       var text = post ? plain(post.title + ' ' + post.content) : plain(li.textContent);
       var ok = words.every(function (w) { return text.indexOf(w) !== -1; });
       li.style.display = ok ? '' : 'none';
       setSnippet(li, ok && post ? lines(post.content, words) : null);
-      if (ok) shown++;
+      if (ok) {
+        shown++;
+        if (post) total += countIn(post.title, words) + countIn(post.content, words);
+      }
     });
     empty.hidden = shown !== 0;
+    count.hidden = shown === 0;
+    count.textContent = shown + (shown === 1 ? ' post' : ' posts') + ' \u00b7 ' + total + (total === 1 ? ' match' : ' matches');
   }
 
   fetch('{{ "/search.json" | relative_url }}')
