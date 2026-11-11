@@ -544,6 +544,13 @@ font-weight: 600;
 font-size: 1.05rem;
 }
 
+.archive-count {
+margin: 0.25rem 0 0;
+text-align: right;
+font-size: 0.85rem;
+color: var(--muted);
+}
+
 .archive-main {
 flex: 1 1 auto;
 min-width: 0;
