@@ -54,6 +54,33 @@ permalink: /blog/
 
   var MAX_LINES = 10000;
 
+  function markTitle(title, words) {
+    var text = String(title).normalize('NFC');
+    var flat = plain(text);
+    var hits = [];
+    words.forEach(function (w) {
+      var i = flat.indexOf(w);
+      while (i !== -1) {
+        hits.push([i, i + w.length]);
+        i = flat.indexOf(w, i + w.length);
+      }
+    });
+    hits.sort(function (a, b) { return a[0] - b[0]; });
+    var out = '';
+    var pos = 0;
+    hits.forEach(function (h) {
+      if (h[0] < pos) return;
+      out += esc(text.slice(pos, h[0])) + '<mark>' + esc(text.slice(h[0], h[1])) + '</mark>';
+      pos = h[1];
+    });
+    return out + esc(text.slice(pos));
+  }
+
+  // ⟦ and ⟧ wrap text that is code in the post (see search.json)
+  function codeHtml(s) {
+    return s.replace(/⟦/g, '<code>').replace(/⟧/g, '</code>');
+  }
+
   function lines(content, words) {
     var text = String(content).normalize('NFC');
     var flat = plain(text);
@@ -87,6 +114,9 @@ permalink: /blog/
         pos = stop;
       });
       out += esc(text.slice(pos, end));
+      var before = text.slice(0, start);
+      var inCode = before.lastIndexOf('⟦') > before.lastIndexOf('⟧');
+      out = codeHtml((inCode ? '⟦' : '') + out);
       return (start > 0 ? '\u2026' : '') + out + (end < text.length ? '\u2026' : '');
     });
 
@@ -106,8 +136,15 @@ permalink: /blog/
     });
   }
 
+  function setTitle(li, words) {
+    var a = li.querySelector('.archive-title');
+    if (!a.hasAttribute('data-title')) a.setAttribute('data-title', a.textContent);
+    var t = a.getAttribute('data-title');
+    if (words) a.innerHTML = markTitle(t, words); else a.textContent = t;
+  }
+
   function showAll() {
-    items.forEach(function (li) { li.style.display = ''; setSnippet(li, null); });
+    items.forEach(function (li) { li.style.display = ''; setSnippet(li, null); setTitle(li, null); });
     count.hidden = true;
   }
 
@@ -129,6 +166,7 @@ permalink: /blog/
       var ok = words.every(function (w) { return text.indexOf(w) !== -1; });
       li.style.display = ok ? '' : 'none';
       setSnippet(li, ok && post ? lines(post.content, words) : null);
+      setTitle(li, ok ? words : null);
       if (ok) {
         shown++;
         if (post) total += countIn(post.title, words) + countIn(post.content, words);
