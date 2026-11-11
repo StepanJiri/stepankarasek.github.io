@@ -13,8 +13,6 @@ permalink: /blog/
 
 <p id="archive-count" class="archive-count" hidden></p>
 
-<p id="archive-empty" class="search-empty" hidden>Nothing found.</p>
-
 <ul class="archive-list">
   {% for post in site.posts %}
   <li class="archive-item" data-url="{{ post.url | relative_url }}">
@@ -29,7 +27,6 @@ permalink: /blog/
 (function () {
   var form = document.getElementById('archive-search');
   var input = document.getElementById('archive-search-input');
-  var empty = document.getElementById('archive-empty');
   var count = document.getElementById('archive-count');
   var items = document.querySelectorAll('.archive-item');
   var index = null;
@@ -112,7 +109,6 @@ permalink: /blog/
 
   function showAll() {
     items.forEach(function (li) { li.style.display = ''; setSnippet(li, null); });
-    empty.hidden = true;
     count.hidden = true;
   }
 
@@ -121,12 +117,10 @@ permalink: /blog/
     if (words.length === 0) { showAll(); return; }
 
     if (!index) {
-      empty.textContent = failed ? 'Search could not load.' : 'Search is still loading, press Enter again.';
-      empty.hidden = false;
-      count.hidden = true;
+      count.textContent = failed ? 'Search could not load.' : 'Search is still loading, press Enter again.';
+      count.hidden = false;
       return;
     }
-    empty.textContent = 'Nothing found.';
 
     var shown = 0;
     var total = 0;
@@ -141,9 +135,10 @@ permalink: /blog/
         if (post) total += countIn(post.title, words) + countIn(post.content, words);
       }
     });
-    empty.hidden = shown !== 0;
-    count.hidden = shown === 0;
-    count.textContent = shown + (shown === 1 ? ' post' : ' posts') + ' \u00b7 ' + total + (total === 1 ? ' match' : ' matches');
+    count.hidden = false;
+    count.textContent = shown === 0
+      ? 'Nothing found.'
+      : shown + (shown === 1 ? ' post' : ' posts') + ' \u00b7 ' + total + (total === 1 ? ' match' : ' matches');
   }
 
   fetch('{{ "/search.json" | relative_url }}')
