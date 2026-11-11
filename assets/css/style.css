@@ -545,7 +545,11 @@ font-size: 1.05rem;
 }
 
 .archive-count {
-margin: 0.25rem 0 0;
+position: absolute;
+right: 0;
+top: 100%;
+margin: 0;
+line-height: 1.3;
 text-align: right;
 font-size: 0.85rem;
 color: var(--muted);
@@ -580,6 +584,7 @@ color: var(--accent);
 
 /* ---------- Blog archive search ---------- */
 .archive-head {
+position: relative;
 display: flex;
 align-items: center;
 justify-content: space-between;
