@@ -27,4 +27,4 @@ I like the CarPlay integration of apps. I also like that Apple is reusing Apple 
 
 The hardware looks nice and modern. I don't know if the holes will get filled up and messy in a kitchen. Shame is that it doesn't rotate on its own. And the bezels could be smaller. You don't need big bezels for fat fingers like the iPad has.
 
-But all around, I love Apple doing new things. Three years ago, if you had told me that within a year Apple would make a cheaper MacBook, a folding iPhone and a HomePod with a screen, I would not have believed you.
+But all around, I love Apple doing new things. Three years ago, if you had told me that within a single year Apple would make a cheaper MacBook, a folding iPhone and a HomePod with a screen, I would not have believed you.
