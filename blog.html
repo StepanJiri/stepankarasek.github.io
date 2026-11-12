@@ -149,7 +149,9 @@ permalink: /blog/
   }
 
   function run() {
-    var words = plain(input.value).split(/\s+/).filter(function (w) { return w.length > 0; });
+    // the whole query is one phrase: words must appear together, in this order
+    var phrase = plain(input.value).split(/\s+/).filter(function (w) { return w.length > 0; }).join(' ');
+    var words = phrase ? [phrase] : [];
     if (words.length === 0) { showAll(); return; }
 
     if (!index) {
