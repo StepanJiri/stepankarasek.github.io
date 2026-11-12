@@ -5,7 +5,7 @@ date: 2026-11-12 14:07:00 +0200
 ---
 A few days ago, Apple announced new games coming to Apple Arcade, and I think they are pretty good.
 
-**Plants vs. Zombies**: This is some kind of remaster/remake. A year ago I saw a [review](https://youtu.be/zik-Cx7oxQE?is=yKRuKfWMNVRzPFs1 "Plants vs Zombies Is a Complete Mess on Switch 2") of what I think is the same game on the Nintendo Switch 2, and it didn't look good.
+**Plants vs. Zombies**: This is some kind of remaster/remake. A year ago I saw a [review](https://youtu.be/zik-Cx7oxQE?is=yKRuKfWMNVRzPFs1 "Plants vs Zombies Is a Complete Mess on Switch 2") and it didn't look good.
 
 **Solitaire(ish)**: Apple proudly said that the publisher is the same as for the absolutely amazing game Balatro. Let's see if it's any good. It's a card game.
 
