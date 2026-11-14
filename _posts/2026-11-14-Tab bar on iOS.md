@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tab bar on iO"
+title: "Tab bar on iOS"
 date: 2026-11-14 20:15:00 +0100
 ---
 Now I am touching my screen. If I let go, which page will I end up on? The Home page or New Page?
