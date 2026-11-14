@@ -143,8 +143,23 @@ permalink: /blog/
     if (words) a.innerHTML = markTitle(t, words); else a.textContent = t;
   }
 
+  // fade the visible posts in again, one after another (only used after a search)
+  function animateResults() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var visible = [];
+    items.forEach(function (li) {
+      li.classList.remove('is-fading');
+      if (li.style.display !== 'none') visible.push(li);
+    });
+    void document.body.offsetWidth; // restart the animation
+    visible.forEach(function (li, i) {
+      li.style.setProperty('--fade-delay', Math.min(i, 8) * 40 + 'ms');
+      li.classList.add('is-fading');
+    });
+  }
+
   function showAll() {
-    items.forEach(function (li) { li.style.display = ''; setSnippet(li, null); setTitle(li, null); });
+    items.forEach(function (li) { li.style.display = ''; li.classList.remove('is-fading'); setSnippet(li, null); setTitle(li, null); });
     count.hidden = true;
   }
 
@@ -174,6 +189,7 @@ permalink: /blog/
         if (post) total += countIn(post.title, words) + countIn(post.content, words);
       }
     });
+    animateResults();
     count.hidden = false;
     count.textContent = shown === 0
       ? 'Nothing found.'
