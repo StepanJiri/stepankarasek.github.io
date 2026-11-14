@@ -24,7 +24,7 @@ The problem is simple. The selection bubble highlights everything under itself, 
 The sad part is that the iPadOS tab bar is better. There you can clearly see that the selection bubble highlights only the page that is going to be selected. It even highlights the part of the text that is not under the selection bubble. 
 
 ![Inline Image Description]({{ 'assets/images/Tab bar on iOS/iPad_Apple_Music.jpg' | relative_url }})
-￼
+
 This explains itself much better than iOS does.
 
 Why does iPadOS have this and not iOS? I think the iPad team realized it was a good idea because the selection bubble changes width to match the label or icon.
