@@ -99,6 +99,16 @@ permalink: /blog/
     hits.forEach(function (h) {
       var start = Math.max(0, h[0] - 30);
       var end = Math.min(text.length, h[0] + 160);
+      // always begin on the first letter of a word, never in the middle of one
+      if (start > 0 && !/\s/.test(text.charAt(start - 1))) {
+        var f = start;
+        while (f < h[0] && !/\s/.test(text.charAt(f - 1))) f++;
+        if (/\s/.test(text.charAt(f - 1))) {
+          start = f;
+        } else {
+          while (start > 0 && !/\s/.test(text.charAt(start - 1))) start--;
+        }
+      }
       wins.push([start, end]);
       covered = end;
     });
