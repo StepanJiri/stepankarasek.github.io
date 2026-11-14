@@ -18,7 +18,9 @@ Here is my mail: rubicon.revisited@icloud.com
 
 If you are interested, here is my [portfolio](https://rubiconrevisited.com/portfolio/). Mostly, it is just things you can see on my itch.io or YouTube but with more text.
 
-![Daniel Darby Supik]({{ 'assets/images/About_Me/Phone and ATP 1 Photo.webp' | relative_url }}){: style="margin-bottom: 0.25rem;"} Photo by Daniel Darby Supik / (2026-09-19) {: .caption}
+![Daniel Darby Supik]({{ 'assets/images/About_Me/Phone and ATP 1 Photo.webp' | relative_url }}){: style="margin-bottom: 0.25rem;"} 
+Photo by Daniel Darby Supik / (2026-09-19) 
+{: .caption}
 
 ![Daniel Darby Supik]({{ 'assets/images/About_Me/Hoodie and long ear.webp' | relative_url }}){: style="margin-bottom: 0.25rem;"}
 Photo by Daniel Darby Supik / (2026-05-16)
