@@ -15,6 +15,7 @@ No, Radio.
 
 And if you think, ‘Hey, that doesn’t make sense,’ then that’s the right thought.
 
+* * *
 
 It all started in iOS 26, when Apple added the ability to switch between pages by dragging over the tab bar. It adds fluidity to movement across the app. That is cool. I have nothing against it.
 
