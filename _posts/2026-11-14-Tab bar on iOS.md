@@ -11,7 +11,6 @@ The answer is New Page. Why? Because this thing I call the selection bubble is m
 What about now? Library, for sure, right?
 
 ![Inline Image Description]({{ 'assets/images/Tab bar on iOS/Apple_Music_Radio.jpg' | relative_url }})
-￼
 No, Radio.
 
 And if you think, ‘Hey, that doesn’t make sense,’ then that’s the right thought.
