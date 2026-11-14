@@ -6,7 +6,6 @@ date: 2026-11-14 20:15:00 +0100
 Now I am touching my screen. If I let go, which page will I end up on? The Home page or New Page?
 
 ![Inline Image Description]({{ 'assets/images/Tab bar on iOS/Apple_Music_New.jpg' | relative_url }})
-￼
 The answer is New Page. Why? Because this thing I call the selection bubble is more visibly over New Page. Okay, simple, right?
 
 What about now? Library, for sure, right?
