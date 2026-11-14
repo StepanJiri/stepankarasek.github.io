@@ -27,7 +27,7 @@ The sad part is that the iPadOS tab bar is better. There you can clearly see tha
 ￼
 This explains itself much better than iOS does.
 
-Why does iPadOS have this and not iOS? I think the iPad team, while making the tab bar, realized it was a good idea because the selection bubble changes width according to the width of the label or icon.
+Why does iPadOS have this and not iOS? I think the iPad team realized it was a good idea because the selection bubble changes width to match the label or icon.
 
 But what if I told you that the iOS tab bar changes width too? In the WhatsApp app, the Communities tab is wider than all the other tabs.
 ￼
