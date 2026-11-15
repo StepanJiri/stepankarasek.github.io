@@ -46,7 +46,6 @@ But this is not the end. Here is a tab bar on iOS that looks similar to the iPad
 
 ![Inline Image Description]({{ 'assets/images/Tab bar on iOS/iOS Horizontal.jpeg' | relative_url }})
 
-￼
 Here it is going to be Collections. On iPadOS, all the letters of Collections would be highlighted, and none from Library.
 
 So at least iOS is consistently unpredictable.
@@ -61,15 +60,15 @@ It is 6M. You can see that it is bold, but just barely. Here is a more visible e
 
 This is an iPhone in landscape orientation. Because it shows more letters, you can see that Months is bold. I would prefer colour, just saying.
 
-And what about this?
-￼
-Here I can’t see which one is bold. They look the same to me. 
+And what about this? Here I can’t see which one is bold. They look the same to me. 
  
 But okay, this post is about the tab bar, so why am I talking about [segmented controls](https://developer.apple.com/design/human-interface-guidelines/segmented-controls "Segmented controls - HIG")? Because I don't see a difference in how they behave when I press and hold. I found [this](https://medium.com/@errumaisha/when-ui-looks-alike-understanding-confusion-between-tabs-and-segmented-controls-fbdfa651f9d9 "When UI Looks Alike: Understanding Confusion Between Tabs and Segmented Controls - blog post") blog post about the difference between tabs and segmented controls. And yeah, I get it. One changes the full view and the other filters just one thing in the same view. But on iOS they both offer a press, hold and move action, and they both kind of fail to show what will happen if I let go.
 
 Go ahead and try it. Once you see it, you can’t unsee it.
 
 I believe this could be a simple fix, if anyone inside Apple noticed it.
+
+* * *
 
 I made a [video](https://youtu.be/j0dKV83ATeY?si=0WcSHr2Zmuqnf7nu "iOS 26's Tab Bar Doesn't Feel Right YouTube video") about this. It is actually my first video on YouTube. 
 
