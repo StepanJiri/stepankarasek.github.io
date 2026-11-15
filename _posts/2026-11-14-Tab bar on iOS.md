@@ -68,10 +68,9 @@ Go ahead and try it. Once you see it, you can’t unsee it.
 
 I believe this could be a simple fix, if anyone inside Apple noticed it.
 
-######I made a [video](https://youtu.be/j0dKV83ATeY?si=0WcSHr2Zmuqnf7nu "iOS 26's Tab Bar Doesn't Feel Right YouTube video") about this. It is actually my first video on YouTube. 
-
-######Screenshots of the tab bar in Apple Music are from iOS 26, not iOS 27, but it is the same.
-
+I made a [video](https://youtu.be/j0dKV83ATeY?si=0WcSHr2Zmuqnf7nu) about this. It is actually my first video on YouTube.
+Screenshots of the tab bar in Apple Music are from iOS 26, not iOS 27, but it is the same.
+{: .caption}
 
 
 
