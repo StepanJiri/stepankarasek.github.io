@@ -57,7 +57,7 @@ And I can go on. This is inside the Apple Health app. Again, if I let go, which 
 
 It is 6M. You can see that it is bold, but just barely. Here is a more visible example from the same app.
 
-![Inline Image Description]({{ 'assets/images/Tab bar on iOS/Apple Music iOS.jpg' | relative_url }})
+![Inline Image Description]({{ 'assets/images/Tab bar on iOS/Apple Music iOS.png' | relative_url }})
 
 This is an iPhone in landscape orientation. Because it shows more letters, you can see that Months is bold. I would prefer colour, just saying.
 
