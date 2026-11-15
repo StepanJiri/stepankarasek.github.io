@@ -19,6 +19,6 @@ This is mostly an AI-coded website. That is not ideal and I know it. But I put e
 **The posts will not be AI-generated.**
 At maximum, a grammar check, because I’m not a native English speaker.
 
-You can look at some posts that have secret information…
+Some posts have a secret information…
 
 Štěpán Jiří Karásek 
