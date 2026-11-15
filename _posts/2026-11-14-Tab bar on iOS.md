@@ -53,11 +53,11 @@ So at least iOS is consistently unpredictable.
 
 And I can go on. This is inside the Apple Health app. Again, if I let go, which view will I end up on?
 
-![Inline Image Description]({{ 'assets/images/Tab bar on iOS/Apple Health iOS Vertical.jpg' | relative_url }})
+![Inline Image Description]({{ 'assets/images/Tab bar on iOS/Apple Health iOS Vertical.png | relative_url }})
 
 It is 6M. You can see that it is bold, but just barely. Here is a more visible example from the same app.
 
-![Inline Image Description]({{ 'assets/images/Tab bar on iOS/Apple Music iOS.png' | relative_url }})
+![Inline Image Description]({{ 'assets/images/Tab bar on iOS/Apple Health iOS Horizontal .jpeg' | relative_url }})
 
 This is an iPhone in landscape orientation. Because it shows more letters, you can see that Months is bold. I would prefer colour, just saying.
 
