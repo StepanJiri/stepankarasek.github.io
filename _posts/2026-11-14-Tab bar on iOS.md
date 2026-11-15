@@ -43,15 +43,22 @@ In the image below, it looks like the Calls tab is going to be selected, but in 
 ![Inline Image Description]({{ 'assets/images/Tab bar on iOS/WhatsApp_Communities_hover.jpg' | relative_url }})
 
 But this is not the end. Here is a tab bar on iOS that looks similar to the iPadOS one but behaves differently again.
+
+![Inline Image Description]({{ 'assets/images/Tab bar on iOS/iOS Horizontal.jpeg' | relative_url }})
+
 ￼
 Here it is going to be Collections. On iPadOS, all the letters of Collections would be highlighted, and none from Library.
 
 So at least iOS is consistently unpredictable.
 
 And I can go on. This is inside the Apple Health app. Again, if I let go, which view will I end up on?
-￼
+
+![Inline Image Description]({{ 'assets/images/Tab bar on iOS/Apple Health iOS Vertical.jpg' | relative_url }})
+
 It is 6M. You can see that it is bold, but just barely. Here is a more visible example from the same app.
-￼
+
+![Inline Image Description]({{ 'assets/images/Tab bar on iOS/Apple Music iOS.jpg' | relative_url }})
+
 This is an iPhone in landscape orientation. Because it shows more letters, you can see that Months is bold. I would prefer colour, just saying.
 
 And what about this?
