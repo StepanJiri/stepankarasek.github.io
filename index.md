@@ -25,11 +25,13 @@ title: Blog
 {% if site.posts.size > 5 %}
 <section class="archive-posts">
   <h3>Older Posts</h3>
-  <ul class="compact-post-list">
-    {% for post in site.posts offset:5 %}
-      <li>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  <ul class="archive-list">
+    {% for post in site.posts offset:5 limit:10 %}
+      <li class="archive-item">
+        <div class="archive-main">
+          <a href="{{ post.url | relative_url }}" class="archive-title">{{ post.title }}</a>
+        </div>
+        <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
       </li>
     {% endfor %}
   </ul>
