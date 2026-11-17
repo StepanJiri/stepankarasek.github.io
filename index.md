@@ -12,13 +12,13 @@ title: Blog
         </h2>
         
         <p class="post-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A, %B %-d, %Y" }}</time>
         </p>
 
         {{ post.content }}
       </div>
     </article>
-    <hr class="post-divider" />
+    {% unless forloop.last %}<hr class="post-divider" />{% endunless %}
   {% endfor %}
 </section>
 
@@ -29,7 +29,6 @@ title: Blog
     {% for post in site.posts offset:5 %}
       <li>
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-        — 
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </li>
     {% endfor %}
@@ -38,5 +37,5 @@ title: Blog
 {% endif %}
 
 <div class="blog-archive-link">
-  <a href="{{ '/blog/' | relative_url }}">View all posts in Blog Archive &rarr;</a>
+  <a href="{{ '/blog/' | relative_url }}">View all posts in Blog Archive</a>
 </div>
