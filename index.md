@@ -26,7 +26,7 @@ title: Blog
 <section class="archive-posts">
   <h3>Older Posts</h3>
   <ul class="archive-list">
-    {% for post in site.posts offset:5 limit:10 %}
+    {% for post in site.posts offset:5 limit:5 %}
       <li class="archive-item">
         <div class="archive-main">
           <a href="{{ post.url | relative_url }}" class="archive-title">{{ post.title }}</a>
@@ -39,5 +39,5 @@ title: Blog
 {% endif %}
 
 <div class="blog-archive-link">
-  <a href="{{ '/blog/' | relative_url }}">View all posts in Blog Archive</a>
+  <a href="{{ '/blog/' | relative_url }}{% if site.posts.size > 10 %}#more-posts{% endif %}">View all posts in Blog Archive</a>
 </div>
