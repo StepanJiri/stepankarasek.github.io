@@ -12,7 +12,7 @@ title: Blog
         </h2>
         
         <p class="post-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A, %B %-d, %Y" }}</time>
+          <a href="{{ post.url | relative_url }}"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }} &middot; {{ post.date | date: "%A" }}</time></a>
         </p>
 
         {{ post.content }}
