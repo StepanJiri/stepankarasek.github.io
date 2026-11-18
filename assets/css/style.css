@@ -201,13 +201,13 @@ margin: 1.75rem 0;
 
 /* divider between posts on the home page: orange, white, orange */
 main hr.post-divider {
-height: 36px;
+height: 15px;
 border: none;
 margin: 2.25rem 0;
 background: linear-gradient(to bottom,
-var(--accent) 0, var(--accent) 12px,
-#ffffff 12px, #ffffff 24px,
-var(--accent) 24px, var(--accent) 36px);
+var(--accent) 0, var(--accent) 5px,
+#ffffff 5px, #ffffff 10px,
+var(--accent) 10px, var(--accent) 15px);
 }
 
 main img,
