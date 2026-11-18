@@ -186,6 +186,14 @@ margin-top: 0;
 margin-bottom: 0.25rem;
 }
 
+.post-meta a {
+color: inherit;
+}
+
+.post-meta a:hover {
+color: var(--accent);
+}
+
 .post-meta {
 color: var(--muted);
 font-size: 0.9rem;
@@ -199,15 +207,12 @@ border-top: 1px solid var(--border);
 margin: 1.75rem 0;
 }
 
-/* divider between posts on the home page: orange, white, orange */
+/* divider between posts on the home page: one bolder line */
 main hr.post-divider {
-height: 15px;
+height: 0;
 border: none;
+border-top: 3px solid var(--muted);
 margin: 2.25rem 0;
-background: linear-gradient(to bottom,
-var(--accent) 0, var(--accent) 5px,
-#ffffff 5px, #ffffff 10px,
-var(--accent) 10px, var(--accent) 15px);
 }
 
 main img,
