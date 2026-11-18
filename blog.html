@@ -14,7 +14,7 @@ permalink: /blog/
 
 <ul class="archive-list">
   {% for post in site.posts %}
-  <li class="archive-item" data-url="{{ post.url | relative_url }}">
+  <li class="archive-item" data-url="{{ post.url | relative_url }}"{% if forloop.index == 11 %} id="more-posts"{% endif %}>
     <div class="archive-main">
       <a href="{{ post.url | relative_url }}" class="archive-title">{{ post.title }}</a>
     </div>
