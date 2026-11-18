@@ -209,10 +209,16 @@ margin: 1.75rem 0;
 
 /* divider between posts on the home page: one bolder line */
 main hr.post-divider {
-height: 0;
+height: 3px;
 border: none;
-border-top: 3px solid var(--muted);
+border-radius: 999px;
+background: var(--muted);
 margin: 2.25rem 0;
+}
+
+/* the Blog Archive opens here when you come from the bottom of the home page */
+#more-posts {
+scroll-margin-top: 1.5rem;
 }
 
 main img,
