@@ -5,6 +5,8 @@ permalink: /devpostnew/
 sitemap: false
 ---
 
+<p class="dev-notice"><strong>Development page.</strong> This is a tool for the site owner to start new posts. It is not for normal use, and nothing here is part of the blog.</p>
+
 <h1>New post</h1>
 
 <p>Type the title and press Enter. GitHub opens with the file name, the title and today's date already filled in. Write the post and press Commit.</p>
@@ -19,6 +21,10 @@ sitemap: false
 <p><button type="button" id="new-post-copy" class="new-post-button new-post-secondary">Copy the front matter instead</button></p>
 
 <style>
+  .dev-notice {
+    margin: 0 0 1.5rem; padding: 0.6rem 0.9rem; font-size: 0.9rem;
+    color: var(--muted); border: 1px dashed var(--accent); border-radius: 8px;
+  }
   .new-post { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0 0.75rem; }
   .new-post-title { width: 100%; max-width: 28rem; font-size: 1rem; }
   .new-post-button {
