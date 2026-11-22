@@ -1,0 +1,106 @@
+---
+layout: default
+title: New post
+permalink: /new/
+sitemap: false
+---
+
+<h1>New post</h1>
+
+<p>Type the title and press Enter. GitHub opens with the file name, the title and today's date already filled in. Write the post and press Commit.</p>
+
+<form id="new-post" class="new-post">
+  <input type="text" id="new-post-title" class="search-input new-post-title" placeholder="Post title" autocomplete="off" autocapitalize="sentences" aria-label="Post title">
+  <button type="submit" class="new-post-button">Open GitHub editor</button>
+</form>
+
+<p id="new-post-preview" class="caption" style="text-align:left;"></p>
+
+<p><button type="button" id="new-post-copy" class="new-post-button new-post-secondary">Copy the front matter instead</button></p>
+
+<style>
+  .new-post { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0 0.75rem; }
+  .new-post-title { width: 100%; max-width: 28rem; font-size: 1rem; }
+  .new-post-button {
+    font: inherit; cursor: pointer; color: #fff; background: var(--accent);
+    border: 0; border-radius: 8px; padding: 0.55rem 1rem;
+  }
+  .new-post-secondary { background: none; color: var(--accent); border: 1px solid var(--accent); }
+</style>
+
+<script>
+(function () {
+  var REPO = 'stepanjiri/stepankarasek.github.io';
+  var BRANCH = 'main';
+  var input = document.getElementById('new-post-title');
+  var form = document.getElementById('new-post');
+  var preview = document.getElementById('new-post-preview');
+  var copyBtn = document.getElementById('new-post-copy');
+
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+
+  // current time in Prague, in Jekyll's format: 2026-11-22 11:40:00 +0100
+  function pragueNow() {
+    var now = new Date();
+    var p = {};
+    new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Prague', hourCycle: 'h23',
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', second: '2-digit'
+    }).formatToParts(now).forEach(function (x) { p[x.type] = x.value; });
+    var asUtc = Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour, +p.minute, +p.second);
+    var mins = Math.round((asUtc - Math.floor(now.getTime() / 1000) * 1000) / 60000);
+    var sign = mins < 0 ? '-' : '+';
+    mins = Math.abs(mins);
+    return {
+      day: p.year + '-' + p.month + '-' + p.day,
+      full: p.year + '-' + p.month + '-' + p.day + ' ' + p.hour + ':' + p.minute + ':' + p.second +
+            ' ' + sign + pad(Math.floor(mins / 60)) + pad(mins % 60)
+    };
+  }
+
+  function slug(title) {
+    return title.normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^A-Za-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+
+  function build() {
+    var title = input.value.trim();
+    var t = pragueNow();
+    var s = slug(title);
+    return {
+      title: title,
+      path: '_posts/' + t.day + '-' + (s || 'new-post') + '.md',
+      text: '---\nlayout: post\ntitle: "' + title.replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"\ndate: ' + t.full + '\n---\n\n'
+    };
+  }
+
+  function update() {
+    var b = build();
+    preview.textContent = b.title ? b.path : '';
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var b = build();
+    if (!b.title) { input.focus(); return; }
+    window.location.href = 'https://github.com/' + REPO + '/new/' + BRANCH +
+      '?filename=' + encodeURIComponent(b.path) + '&value=' + encodeURIComponent(b.text);
+  });
+
+  copyBtn.addEventListener('click', function () {
+    var b = build();
+    if (!b.title) { input.focus(); return; }
+    var text = b.path + '\n\n' + b.text;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(b.text).then(function () {
+        preview.textContent = 'Copied. File name: ' + b.path;
+      }, function () { preview.textContent = text; });
+    } else {
+      preview.textContent = text;
+    }
+  });
+
+  input.addEventListener('input', update);
+})();
+</script>
