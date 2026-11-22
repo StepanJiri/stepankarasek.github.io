@@ -6,21 +6,29 @@ permalink: /blog/
 
 <div class="archive-head">
   <h1>Blog Archive</h1>
-  <form id="archive-search" class="archive-search" role="search">
-    <input type="search" id="archive-search-input" class="search-input" placeholder="Search" enterkeyhint="search" autocomplete="off" aria-label="Search the blog">
-  </form>
+  {% assign favorites = site.posts | where: "favorite", true %}
+  <div class="archive-tools">
+    <form id="archive-search" class="archive-search" role="search">
+      <input type="search" id="archive-search-input" class="search-input" placeholder="Search" enterkeyhint="search" autocomplete="off" aria-label="Search the blog">
+    </form>
+    {% if favorites.size > 0 %}
+    <button type="button" id="archive-fav" class="fav-toggle" aria-pressed="false">&#9733; Favorites first</button>
+    {% endif %}
+  </div>
   <p id="archive-count" class="archive-count" hidden></p>
 </div>
 
 <ul class="archive-list">
   {% for post in site.posts %}
-  <li class="archive-item" data-url="{{ post.url | relative_url }}"{% if forloop.index == 11 %} id="more-posts"{% endif %}>
+  <li class="archive-item" data-url="{{ post.url | relative_url }}" data-i="{{ forloop.index0 }}" data-fav="{% if post.favorite %}1{% else %}0{% endif %}"{% if forloop.index == 11 %} id="more-posts"{% endif %}>
     <div class="archive-main">
-      <a href="{{ post.url | relative_url }}" class="archive-title">{{ post.title }}</a>
+      <a href="{{ post.url | relative_url }}" class="archive-title"><span class="archive-title-text">{{ post.title }}</span>{% if post.favorite %} <span class="fav-star" title="Favorite">&#9733;</span>{% endif %}</a>
     </div>
     <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>  </li>
   {% endfor %}
 </ul>
+
+<p class="rss-link"><a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
 
 <script>
 (function () {
@@ -147,7 +155,7 @@ permalink: /blog/
   }
 
   function setTitle(li, words) {
-    var a = li.querySelector('.archive-title');
+    var a = li.querySelector('.archive-title-text');
     if (!a.hasAttribute('data-title')) a.setAttribute('data-title', a.textContent);
     var t = a.getAttribute('data-title');
     if (words) a.innerHTML = markTitle(t, words); else a.textContent = t;
@@ -204,6 +212,23 @@ permalink: /blog/
     count.textContent = shown === 0
       ? 'Nothing found.'
       : shown + (shown === 1 ? ' post' : ' posts') + ' \u00b7 ' + total + (total === 1 ? ' match' : ' matches');
+  }
+
+  // "Favorites first": starred posts move to the top, everything else keeps its date order
+  var favBtn = document.getElementById('archive-fav');
+  if (favBtn) {
+    var list = document.querySelector('.archive-list');
+    favBtn.addEventListener('click', function () {
+      var on = favBtn.getAttribute('aria-pressed') !== 'true';
+      favBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      Array.prototype.slice.call(items).sort(function (x, y) {
+        if (on) {
+          var d = +y.getAttribute('data-fav') - +x.getAttribute('data-fav');
+          if (d) return d;
+        }
+        return +x.getAttribute('data-i') - +y.getAttribute('data-i');
+      }).forEach(function (li) { list.appendChild(li); });
+    });
   }
 
   fetch('{{ "/search.json" | relative_url }}')
