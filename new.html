@@ -70,7 +70,7 @@ sitemap: false
     var s = slug(title);
     return {
       title: title,
-      path: '_posts/' + t.day + '-' + (s || 'new-post') + '.md',
+      path: '_posts/' + t.day.slice(0, 4) + '/' + t.day.slice(5, 7) + '/' + t.day + '-' + (s || 'new-post') + '.md',
       text: '---\nlayout: post\ntitle: "' + title.replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"\ndate: ' + t.full + '\n---\n\n'
     };
   }
