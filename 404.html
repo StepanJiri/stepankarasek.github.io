@@ -1,0 +1,20 @@
+---
+layout: default
+title: Page not found
+permalink: /404.html
+sitemap: false
+---
+
+<h1>Page not found</h1>
+
+<p>There is nothing at this address<span id="missing-path"></span>. The link may be old, or the post may have moved.</p>
+
+<p>You can go to the <a href="{{ '/' | relative_url }}">home page</a> or look through the <a href="{{ '/blog/' | relative_url }}">Blog Archive</a>. The search box there finds words inside posts.</p>
+
+<script>
+(function () {
+  var el = document.getElementById('missing-path');
+  var path = window.location.pathname;
+  if (el && path && path !== '/404.html') el.textContent = ' (' + path + ')';
+})();
+</script>
