@@ -8,7 +8,7 @@ title: Blog
     <article class="full-post">
       <div class="post-content">
         <h2 class="article-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.favorite %} <span class="fav-star" title="Favorite">&#9733;</span>{% endif %}
         </h2>
         
         <p class="post-meta">
@@ -29,7 +29,7 @@ title: Blog
     {% for post in site.posts offset:5 limit:5 %}
       <li class="archive-item">
         <div class="archive-main">
-          <a href="{{ post.url | relative_url }}" class="archive-title">{{ post.title }}</a>
+          <a href="{{ post.url | relative_url }}" class="archive-title"><span class="archive-title-text">{{ post.title }}</span>{% if post.favorite %} <span class="fav-star" title="Favorite">&#9733;</span>{% endif %}</a>
         </div>
         <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
       </li>
@@ -41,3 +41,5 @@ title: Blog
 <div class="blog-archive-link">
   <a href="{{ '/blog/' | relative_url }}{% if site.posts.size > 10 %}#more-posts{% endif %}">View all posts in Blog Archive</a>
 </div>
+
+<p class="rss-link"><a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
