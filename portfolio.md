@@ -3,6 +3,8 @@ layout: default
 title: Portfolio
 permalink: /portfolio/
 ---
+# this page in work in progress
+
 
 # Portfolio
 Hi, my name is Štěpán Jiří Karásek. Here is some of my work that I have done in my life. 
