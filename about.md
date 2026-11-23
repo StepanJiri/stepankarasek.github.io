@@ -8,13 +8,13 @@ hide_rss: false
 
 Hi, I'm Štěpán Jiří Karásek. Welcome to my page. Here I write about what I find interesting. 
 
-You can find me on [Mastodon](https://mastodon.social/@StepanJiriKarasek), [Youtube](https://www.youtube.com/channel/UCNr3EHRzIhJ2l8KLF9SlgFw), [itch.io](https://jirka-karasek.itch.io/) and [podcast](https://rubiconrevisited.com/podcast/).
+You can find me on [Mastodon](https://mastodon.social/@StepanJiriKarasek), [YouTube](https://www.youtube.com/channel/UCNr3EHRzIhJ2l8KLF9SlgFw), [itch.io](https://jirka-karasek.itch.io/) and [podcast](https://rubiconrevisited.com/podcast/).
 
-I love to reference lyrics from *Bob Dylan, Jesse Wells, Neil Young, Goose and the Beatles.*
+I love to reference lyrics from *Bob Dylan, Jesse Welles, Neil Young, Goose and the Beatles.*
 
-If I believe that the best way to communicate about something is via text, I will use this website. I will try my best writing here. I’m not a native English speaker. 
+If I believe that the best way to communicate about something is via text, I will use this website. I will do my best when writing here. I’m not a native English speaker. 
 
-Here is my mail: rubicon.revisited@icloud.com
+Here is my email: rubicon.revisited@icloud.com
 
 If you are interested, here is my [portfolio](https://rubiconrevisited.com/portfolio/). Mostly, it is just things you can see on my itch.io or YouTube but with more text.
 
