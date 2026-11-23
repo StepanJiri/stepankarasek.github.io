@@ -12,7 +12,7 @@ But there is another way to do it. On Instagram, you can double-tap on a message
 
 This might be a small difference for most people. But for me, this is a very big difference. 
 
-Instagram offers a simplistic way to react. I would guess that the variety of emoji is much smaller than on Messages or WhatsApp just because Instagram offers this double-tap way. 
+Instagram offers a simple way to react. I would guess that the variety of emoji is much smaller than on Messages or WhatsApp just because Instagram offers this double-tap way. 
 
 WhatsApp and Instagram are both products of Meta. But they both have a different set of customers. WhatsApp is more broad. Everyone has it. Instagram, on the other hand, has a “younger” audience. My school messaging group is on Instagram. 
 
