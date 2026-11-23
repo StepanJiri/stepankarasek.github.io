@@ -6,7 +6,7 @@ date: 2026-11-17 19:49:00 +0100
 iOS 26 and 27 made the left vertical bar with information like time, cellular, recent apps, and the Home button into a floating island made of Liquid Glass. Let's call that Sidebar.
 
 ![Inline Image Description]({{ 'assets/images/CarPlay Sidebar/New_CarPlay.jpg' | relative_url }})
-And I don't like that. Why? Because every single element on the right is its own island too, and I like that. So why do I hate the sidebar? Because, and this is very important, IT DOES NOT CHANGE shape.
+And I don't like that. Every single element on the right is its own island too, and I like that. So why do I hate the sidebar? Because, and this is very important, IT DOES NOT CHANGE shape.
 
 ***
 
