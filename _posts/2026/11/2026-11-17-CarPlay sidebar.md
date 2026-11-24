@@ -14,7 +14,7 @@ Let me explain. In the image above, all the islands on the right, like the map, 
  
 But the Sidebar on the left does not change. I know I am saying it again, but just looking at it, if I had no knowledge of how this software behaves, I would say it can change. The things on the right look like they can change, depending on what they show. They don't show permanent information. Take the flight information: the plane is going to touch the ground eventually. Time and cellular information are not going to end. So do not make it look like it can change.
 
-During a call, the time appears in a green capsule. The capsule is totally inconsistent with the space of the island. 
+During a call, the time appears in a green capsule. This capsule feels entirely mismatched with the island’s space.
 
 The image below shows the vertical bar filled edge to edge, except on the right, of course. this is older iOS.
  
