@@ -13,8 +13,10 @@ And I don't like that. Every single element on the right is its own island too, 
 Let me explain. In the image above, all the islands on the right, like the map, directions, flight details, and now playing, are only there for an active reason. If no flight is being tracked, there is no flight information. If there are no directions, there is no directions island. So they change depending on the information that CarPlay determines is important, like an upcoming calendar event or a recommended destination.
  
 But the Sidebar on the left does not change. I know I am saying it again, but just looking at it, if I had no knowledge of how this software behaves, I would say it can change. The things on the right look like they can change, depending on what they show. They don't show permanent information. Take the flight information: the plane is going to touch the ground eventually. Time and cellular information are not going to end. So do not make it look like it can change.
- 
-And it actually used to be like that. The image below shows the vertical bar filled edge to edge, except on the right, of course.
+
+During a call, the time appears in a green capsule. The capsule is totally inconsistent with the space of the island. 
+
+The image below shows the vertical bar filled edge to edge, except on the right, of course. this is older iOS.
  
 ![Inline Image Description]({{ 'assets/images/CarPlay Sidebar/Old_CarPlay.png' | relative_url }})
  
