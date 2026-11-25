@@ -33,7 +33,7 @@ Photo by Daniel Darby Supik / (2026-05-16)
 {: .caption}
 
 ![Daniel Darby Supik]({{ 'assets/images/About_Me/Green Winter Crop.webp' | relative_url }}){: style="margin-bottom: 0.25rem;"}
-Photo by Daniel Darby Supik / (2026-02-17) BTW Daniel is not my personal photographer.
+Photo by Daniel Darby Supik / (2026-02-17) BTW Daniel is my personal photographer.
 {: .caption}
 
 
