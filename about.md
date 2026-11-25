@@ -22,6 +22,12 @@ If you are interested, here is my [portfolio](https://rubiconrevisited.com/portf
 Photo by Daniel Darby Supik / (2026-09-19) 
 {: .caption}
 
+
+![Daniel Darby Supik]({{ 'assets/images/About_Me/Person in Chair.webp' | relative_url }}){: style="margin-bottom: 0.25rem;"}
+Photo by Daniel Darby Supik / (2026-11-21)
+{: .caption}
+
+
 ![Daniel Darby Supik]({{ 'assets/images/About_Me/Hoodie and long ear.webp' | relative_url }}){: style="margin-bottom: 0.25rem;"}
 Photo by Daniel Darby Supik / (2026-05-16)
 {: .caption}
@@ -29,5 +35,9 @@ Photo by Daniel Darby Supik / (2026-05-16)
 ![Daniel Darby Supik]({{ 'assets/images/About_Me/Green Winter Crop.webp' | relative_url }}){: style="margin-bottom: 0.25rem;"}
 Photo by Daniel Darby Supik / (2026-02-17) BTW Daniel is not my personal photographer.
 {: .caption}
+
+
+
+
 
 [About this web.](https://rubiconrevisited.com/aboutweb/) 
