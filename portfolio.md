@@ -34,7 +34,8 @@ I attended game jam from [Game Devs Ostrava](https://gameova.cz/)in early late 2
 
 My most favourite project from game jam is [free  mind](https://jirka-karasek.itch.io/free-mind) (small f and two spaces between words is not a typo) It is a platformer with focus on escape. From early 2026 game jam.
 
-One time I attended [GMTK Game Jam 2025](https://itch.io/jam/gmtk-2025). I was alone and made two games. It was very stressful. Looking back at this I don’t like these two games.  
+One time I attended **[GMTK Game Jam 2025](https://itch.io/jam/gmtk-2025)**. I was alone and made two games. It was very stressful. Looking back at this I don’t like these two games.    
+
 
 ## Photos
 This is short. A few times I was taking photos for **Koprcup**. Photos [1](https://www.instagram.com/p/DKKWtChMmYL/?img_index=1), [2](https://www.instagram.com/p/DIbgQqziCew/), [3](https://www.instagram.com/p/DIs5AijMGUr/?img_index=1). 
